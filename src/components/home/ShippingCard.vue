@@ -3,31 +3,32 @@
     <div class="container">
       <div class="card">
         <div class="card-content">
-          <div class="content">
-            <div class="columns">
-              <div class="column">
-                <h5>Origin</h5>
-                <input class="input" type="text" placeholder="Type destination address" />
-              </div>
-              <div class="column">
-                <h5>Destination</h5>
-                <input class="input" type="text" placeholder="Type destination address" />
-              </div>
-              <div class="column">
-                <h5>Weight</h5>
-                <div class="select">
-                  <select>
-                    <option>Select a weight (max.100kg)</option>
-                    <option>With options</option>
-                  </select>
-                </div>
-              </div>
-              <div class="level">
-                <div class="btn">
-                  <app-red-button title="Check Price"></app-red-button>
-                </div>
+          <!-- <div class="content"> -->
+          <div class="columns">
+            <div class="column">
+              <h5>Origin</h5>
+              <input class="input" type="text" placeholder="Type destination address" />
+            </div>
+            <div class="column">
+              <h5>Destination</h5>
+              <input class="input" type="text" placeholder="Type destination address" />
+            </div>
+            <div class="column">
+              <h5>Weight</h5>
+              <input
+                class="input"
+                type="number"
+                placeholder="Select a weight (max.100kg)"
+                min="1"
+                max="100"
+              />
+            </div>
+            <div class="level">
+              <div class="btn">
+                <app-red-button title="Check Price"></app-red-button>
               </div>
             </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -64,7 +65,8 @@ h5 {
   margin: 12px;
 }
 .content {
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 </style>
 

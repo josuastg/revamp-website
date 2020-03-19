@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="section">
-      <div :style="item" class="bg-home-second">
+      <div :style="item" class="bg-home-second is-relative">
         <app-title></app-title>
         <app-shipping-card></app-shipping-card>
       </div>
