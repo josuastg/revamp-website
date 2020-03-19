@@ -1,0 +1,25 @@
+<template>
+    <button class="button is-danger is-hovered">
+      <p class="title">{{title}}</p>
+    </button>
+</template>
+
+<script>
+export default {
+  props: ["title"]
+};
+</script>
+
+<style scoped>
+.title {
+  font-weight: 600;
+  width: 82px;
+  height: 19px;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 14px;
+  color: white;
+  line-height: normal;
+  letter-spacing: 0.07px;
+}
+</style>
