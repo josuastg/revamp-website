@@ -1,22 +1,21 @@
 <template>
-  <div class="content-image">
-    <div class="img-two" :style="item">
-      <div class="img-one">
-        <img src="../../assets/mobile_small_three.png" />
-      </div>
-      <div class="img-three">
-        <img src="../../assets/mobile_small_six.png" />
-      </div>
-    </div>
+  <div class="container">
+    <div class="content"> 
+    <div class="img-logo" :style="item"/>
+</div>
   </div>
 </template>
 
 <script>
+
 export default {
+  components: {
+   
+  },
   data() {
     return {
       item: {
-        backgroundImage: `url(${require("../../assets/mobile_small_three.png")})`
+        backgroundImage: `url(${require("../../assets/mobile_logo.png")})`
       }
     };
   }
@@ -24,25 +23,17 @@ export default {
 </script>
 
 <style scoped>
-.content-image {
-  flex-direction: row;
-  display: flex;
-}
-.img-one {
-  width: 240px;
-  height: 352px;
-}
-.img-three {
-  width: 240px;
-  height: 352px;
-}
-.img-two {
-  width: 240px;
-  height: 352px;
-  display: flex;
+.img-logo {
+  width: 380px;
+  height: 320px;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
-  background-position: center;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+
 }
 </style>

@@ -1,12 +1,25 @@
 <template>
   <div>
     <section class="section">
-      <div :style="item" class="bg-home-second is-relative">
+      <div :style="item" class="bg-home-second">
         <app-title></app-title>
         <app-shipping-card></app-shipping-card>
       </div>
     </section>
-    <app-mobile-logo></app-mobile-logo>
+    <section class="section">
+      <div class="columns">
+        <div class="column">
+          <app-mobile-logo></app-mobile-logo>
+        </div>
+        <div class="column">
+          <app-text-download></app-text-download>
+        </div>
+        <div class="column">
+         
+          <app-track-card></app-track-card>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -14,12 +27,16 @@
 import Title from "./Title";
 import MobileLogo from "./MobileLogo";
 import ShippingCard from "./ShippingCard";
+import TextDownload from "./TextDownload";
+import TrackCard from "./TrackCard";
 export default {
   name: "home-page",
   components: {
     "app-title": Title,
     "app-shipping-card": ShippingCard,
-    "app-mobile-logo": MobileLogo
+    "app-mobile-logo": MobileLogo,
+    "app-text-download": TextDownload,
+    "app-track-card": TrackCard
   },
   data() {
     return {
@@ -54,4 +71,5 @@ export default {
   left: 0;
   background-image: linear-gradient(to bottom, rgb(255, 0, 0, 0), #ffffff);
 }
+
 </style>
