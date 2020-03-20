@@ -31,9 +31,9 @@ export default {
   background-size: contain;
 }
 
-.content{
+/* .content{
   display: flex;
   flex-direction: row;
 
-}
+} */
 </style>
