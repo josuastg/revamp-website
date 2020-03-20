@@ -3,7 +3,6 @@
     <div class="container">
       <div class="card">
         <div class="card-content">
-          <!-- <div class="content"> -->
           <div class="columns">
             <div class="column">
               <h5>Origin</h5>
@@ -18,7 +17,7 @@
               <input
                 class="input"
                 type="number"
-                placeholder="Select a weight (max.100kg)"
+                placeholder="Insert a weight (max.100kg)"
                 min="1"
                 max="100"
               />
@@ -28,7 +27,6 @@
                 <app-red-button title="Check Price"></app-red-button>
               </div>
             </div>
-            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -63,10 +61,6 @@ h5 {
   justify-content: flex-end;
   align-self: flex-end;
   margin: 12px;
-}
-.content {
-  margin-top: 10px;
-  margin-bottom: 40px;
 }
 </style>
 
