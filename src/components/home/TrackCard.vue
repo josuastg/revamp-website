@@ -1,11 +1,13 @@
 <template>
-  <div class="container">
     <div class="cards">
       <p class="track">You can simply track your shipment</p>
-      <div class="card">
-        <div class="card-content">
-          <div class="content">
-            <input class="input" type="text" placeholder="Enter Tracking number" />
+      <div class="content">
+        <div class="card">
+          <div class="card-content">
+            <div class="input-track">
+              <input class="input" type="text" placeholder="Enter Tracking number" />
+              <img src="../../assets/question.png" class="img-question" />
+            </div>
             <p class="sub-track">+Track Another Shipment</p>
             <div class="btn">
               <app-red-button title="Track"></app-red-button>
@@ -18,8 +20,7 @@
         <div class="card-content">
           <div class="content">
             <input class="input" type="text" placeholder="Enter Claim number" />
-            <p class="sub-track">+Form Klaim</p>
-
+            <p class="sub-track">Create Claim Form</p>
             <div class="btn">
               <app-red-button title="Track"></app-red-button>
             </div>
@@ -27,7 +28,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -84,7 +84,17 @@ export default {
   letter-spacing: 0.24px;
   color: #d11f40;
 }
-.cards{
-    margin: 10px;
+.cards {
+  margin: 20px;
+}
+.input-track {
+  display: flex;
+  flex-direction: row;
+}
+.img-question {
+  width: 22px;
+  height: 22px;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 </style>
