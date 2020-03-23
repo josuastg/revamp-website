@@ -8,7 +8,7 @@
           </a>
           <a
             role="button"
-            class="navbar-burger burger"
+            class="navbar-burger is-danger burger"
             aria-label="menu"
             v-on:click="expandClick"
             aria-expanded="false"
@@ -186,11 +186,16 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
 .container {
   align-items: stretch;
   display: flex;
   min-height: 3.25rem;
   width: 100%;
   font-weight: bold;
+}
+h6 {
+  font-family: "Poppins", sans-serif;
 }
 </style>
