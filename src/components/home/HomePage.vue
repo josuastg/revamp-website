@@ -2,12 +2,28 @@
   <div>
     <section class="section">
       <div :style="item" class="bg-home-second">
-        <app-title></app-title>
-        <app-shipping-card></app-shipping-card>
+        <app-title>
+          <div class="button-group">
+            <div class="columns">
+              <div class="column">
+                <app-check-price-button title="Cek Tarif" href="#shipping-card"></app-check-price-button>
+              </div>
+              <div class="column">
+                <app-track-button title="Lacak" href="#track-card"></app-track-button>
+              </div>
+            </div>
+            <!-- <div class="buttons"> -->
+            <!-- </div> -->
+          </div>
+        </app-title>
+
+        <section class="section" id="shipping-card">
+          <app-shipping-card></app-shipping-card>
+        </section>
       </div>
     </section>
     <div class="container">
-      <section class="section">
+      <section class="section" id="track-card">
         <div class="level">
           <div class="level-left">
             <app-mobile-logo></app-mobile-logo>
@@ -24,13 +40,12 @@
       <section class="section">
         <div class="level">
           <div class="level-left">
-            <p class="help-title">Program</p>
+            <p id="help-title">Promo</p>
           </div>
-          <!-- <div class="level-right"> -->
-          <p class="sub">See All Promo</p>
-          <!-- </div> -->
+          <div class="level-right">
+            <p class="sub">Lihat Semua</p>
+          </div>
         </div>
-
         <carousel
           :perPageCustom="[[360, 1], [1024, 3]]"
           :autoplay="true"
@@ -52,15 +67,16 @@
         </carousel>
       </section>
       <section class="section">
-        <p class="help-title">Why Us ?</p>
+        <p id="help-title">Mengapa Kami ?</p>
         <app-reason-card></app-reason-card>
       </section>
       <section class="section">
         <app-border></app-border>
+        <section class="section">
+          <app-footer></app-footer>
+        </section>
       </section>
-      <section class="section">
-        <app-footer></app-footer>
-      </section>
+
       <app-bottom></app-bottom>
     </div>
   </div>
@@ -79,6 +95,8 @@ import TrackCard from "./TrackCard";
 import ReasonCard from "./ReasonCard";
 import CloudLogo from "./CloudLogo";
 import Footer from "./Footer";
+import RedButton from "../../components/RedButton";
+import WhiteButton from "../../components/WhiteButton";
 export default {
   name: "home-page",
   components: {
@@ -89,10 +107,12 @@ export default {
     "app-track-card": TrackCard,
     "app-cloud-logo": CloudLogo,
     "app-reason-card": ReasonCard,
+    "app-check-price-button": WhiteButton,
     "app-footer": Footer,
     "app-carousel": PromoCarousel,
     "app-border": Border,
     "app-bottom": Bottom,
+    "app-track-button": RedButton,
     carousel: Carousel,
     slide: Slide
   },
@@ -106,7 +126,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 .bg-home-second {
   background-size: cover;
   background-position: center;
@@ -130,11 +151,13 @@ export default {
   background-image: linear-gradient(to bottom, rgb(255, 0, 0, 0), #ffffff);
 }
 
-.help-title {
+#help-title {
   object-fit: contain;
   font-size: 18px;
   text-align: left;
   margin-left: 20px;
+  font-family: "Poppins", sans-serif;
+
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -145,6 +168,7 @@ export default {
   object-fit: contain;
   font-size: 13px;
   font-weight: 500;
+  font-family: "Poppins", sans-serif;
   font-stretch: normal;
   margin-left: 20px;
   margin-right: 20px;
@@ -152,5 +176,11 @@ export default {
   line-height: normal;
   letter-spacing: normal;
   color: #d11f40;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 </style>
