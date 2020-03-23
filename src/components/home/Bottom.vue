@@ -1,6 +1,6 @@
 <template>
   <div class="bottom">
-    <p class="text">@ 2020 All Rights Reserved- Lion Parcel</p>
+    <p class="text">@ 2020 All Rights Reserved - Lion Parcel</p>
   </div>
 </template>
 
@@ -8,20 +8,21 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 .bottom {
   width: 100%;
   display: flex;
   position: absolute;
   justify-content: center;
   flex-direction: column;
-  margin-top: 200px;
-  height: 40px;
+  height: 35px;
   background-image: linear-gradient(to top, #f3f3f3, #ffffff);
 }
 .text {
   font-weight: bold;
   object-fit: contain;
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   font-stretch: normal;
   font-style: normal;
