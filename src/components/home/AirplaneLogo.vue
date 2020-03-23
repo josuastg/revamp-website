@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <!-- <div class="container"> -->
     <div class="content">
       <div :style="firstitem" class="second-cloud">
         <!-- <img src="../../assets/airplane.png" class="airplane" /> -->
@@ -7,7 +7,7 @@
       </div>
       <div :style="seconditem" class="third-cloud"></div>
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -28,8 +28,8 @@ export default {
 <style scoped>
 .content {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+   flex-direction: row;
+  justify-content: center; 
 }
 .airplane {
   margin-left: 20px;
@@ -41,6 +41,7 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   height: 80px;
+  margin-bottom:80px;
 }
 .third-cloud {
   width: 140px;
