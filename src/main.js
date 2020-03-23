@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueCarousel from 'vue-carousel';
 import './../node_modules/bulma/css/bulma.css';
 import VueRouter from "vue-router";
 import { routes } from "./route/routes";
 Vue.config.productionTip = false
-
+Vue.use(VueCarousel);
 Vue.use(VueRouter);
 
 const router = new VueRouter({
