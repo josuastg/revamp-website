@@ -1,6 +1,7 @@
 <template>
-    <button class="button is-danger is-outlined">{{title}}</button>
- 
+  <a >
+    <button class="button is-danger is-outlined" id="title">{{title}}</button>
+  </a>
 </template>
 
 <script>
@@ -10,15 +11,16 @@ export default {
 </script>
 
 <style scoped>
-.title {
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+#title {
   font-weight: 600;
-  width: 82px;
-  height: 16px;
+  width: 120px;
+  height: 40px;
   font-stretch: normal;
   font-style: normal;
   font-size: 14px;
   line-height: normal;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0.07px;
 }
 </style>
