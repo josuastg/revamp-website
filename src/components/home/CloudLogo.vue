@@ -5,13 +5,15 @@
         <div class="level">
           <div class="level-right">
             <div :style="item" class="img-cloud">
-              <p
-                class="text-promo"
-              >Fastest and Reaching all corners of Indonesia, using our own airplane</p>
+              <p class="text-promo">
+                Tercepat dan Menjangkau seluruh pelosok Indonesia,
+                menggunakan pesawat kami sendiri
+              </p>
               <p
                 class="sub-text-promo"
-              >With Lion Parcel, you can send packages to all corners of Indonesia supported by Lion Air's Fleet</p>
-              <p class="sub-text-promo">without worrying about waiting too long</p>
+              >Dengan Lion Parcel, Anda dapat mengirim paket ke seluruh pelosok Indonesia yang didukung oleh Lion Air's Fleet,</p>
+              <p class="sub-text-promo"></p>
+              <p class="sub-text-promo">tanpa khawatir menunggu terlalu lama</p>
             </div>
           </div>
           <div class="level-left">
@@ -40,10 +42,12 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
 .content {
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .img-cloud {
   max-width: 100%;
@@ -53,12 +57,13 @@ export default {
   height: 150px;
   flex-direction: column;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .text-promo {
+  font-family: "Poppins", sans-serif;
   max-width: 100%;
   object-fit: contain;
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
   font-weight: 600;
   font-stretch: normal;
@@ -69,8 +74,9 @@ export default {
   color: #d11f40;
 }
 .sub-text-promo {
+  font-family: "Poppins", sans-serif;
   object-fit: contain;
-  font-size: 14px;
+  font-size: 12px;
   max-width: 100%;
   text-align: left;
   font-weight: normal;
