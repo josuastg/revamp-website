@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div class="top-border" />
-    <div class="footer">
+    <!-- <div class="footer"> -->
       <div class="content">
         <div class="columns">
           <div class="column">
@@ -37,6 +36,11 @@
           </div>
           <div class="column">
             <p class="title">Follow Us</p>
+            <div class="social">
+              <img src="../../assets/twitter.png" class="social-media" />
+              <img src="../../assets/fb.png" class="social-media" />
+              <img src="../../assets/instagram.png" class="social-media" />
+            </div>
           </div>
           <div class="column">
             <p class="getapp">Get the app</p>
@@ -48,7 +52,7 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -60,14 +64,9 @@ export default {};
   background-color: white;
   width: 100%;
   height: 220px;
-}
-.top-border {
-  height: 0.5px;
-  width: 100%;
-  border-style: solid;
-  background-size: cover;
-  border-color: whitesmoke;
-  border-width: 0.5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .content-subtitle {
@@ -77,16 +76,16 @@ export default {};
   letter-spacing: normal;
 }
 .img-playstore {
-  width: 120px;
-  height: 40px;
+  width: 160px;
+  height: 43px;
   object-fit: contain;
 }
 .img-appstore {
-  width: 100px;
-  height: 40px;
+  width: 140px;
+  height: 43px;
   object-fit: contain;
 }
-.img-content{
+.img-content {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -94,7 +93,7 @@ export default {};
 
 .title {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   object-fit: contain;
   font-stretch: normal;
   font-style: normal;
@@ -102,7 +101,7 @@ export default {};
   letter-spacing: normal;
 }
 .subtitle {
-  font-size: 12px;
+  font-size: 16px;
   object-fit: contain;
   text-align: justify;
   font-stretch: normal;
@@ -117,5 +116,18 @@ export default {};
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+}
+.social-media {
+  flex-direction: row;
+  width: 16px;
+  height: 16px;
+  margin: 3px;
+  display: flex;
+  align-self: center;
+}
+.social {
+  flex-direction: row;
+  display: flex;
+  align-self: center;  
 }
 </style>
