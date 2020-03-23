@@ -3,7 +3,7 @@
     <!-- <div class="buttons"> -->
       <div class="columns">
         <div class="column">
-          <app-check-price-button title="Check Price"></app-check-price-button>
+          <app-check-price-button title="Check Price" ></app-check-price-button>
         </div>
         <div class="column">
           <app-track-button title="Tracking"></app-track-button>
@@ -25,9 +25,5 @@ export default {
 </script>
 
 <style scoped>
-.button-group {
-  display: flex;
-  justify-content: center;
-  margin-top: 5px;
-}
+
 </style>

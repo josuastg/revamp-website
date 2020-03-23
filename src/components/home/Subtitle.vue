@@ -9,9 +9,12 @@ export default {};
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
 .subtitle {
   text-align: center;
   font-weight: normal;
+  font-family: "Poppins", sans-serif;
   font-size: 17.5px;
   font-stretch: normal;
   font-style: normal;

@@ -1,28 +1,28 @@
 <template>
   <div class="cards">
-    <p class="track">You can simply track your shipment</p>
+    <p class="track">Lacak Pengiriman Anda Sekarang Disini</p>
     <div class="content">
       <div class="card">
         <div class="card-content">
           <div class="input-track">
-            <input class="input" type="text" placeholder="Enter Tracking number" />
+            <input class="input" type="text" placeholder="Masukan nomor pengiriman" />
             <img src="../../assets/question.png" class="img-question" />
           </div>
-          <p class="sub-track">+Track Another Shipment</p>
+          <p class="sub-track">+Tambah</p>
           <div class="btn">
-            <app-red-button title="Track"></app-red-button>
+            <app-red-button title="Lacak"></app-red-button>
           </div>
         </div>
       </div>
     </div>
-    <p class="track-claim">Tracking Claim</p>
+    <p class="track-claim">Klaim</p>
     <div class="content">
       <div class="card">
         <div class="card-content">
-          <input class="input" type="text" placeholder="Enter Claim number" />
-          <p class="sub-track">Create Claim</p>
+          <input class="input" type="text" placeholder="Masukan nomor klaim" />
+          <p class="sub-track">Buat Klaim</p>
           <div class="btn">
-            <app-red-button title="Track"></app-red-button>
+            <app-red-button title="Kirim"></app-red-button>
           </div>
         </div>
       </div>
@@ -39,7 +39,8 @@ export default {
 };
 </script>
   
-<style >
+<style  scoped>
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 .btn {
   display: flex;
   justify-content: flex-end;
@@ -49,9 +50,10 @@ export default {
   text-align: center;
   width: 330px;
   height: 15px;
-  margin-left: 8px;
+  margin-left: 6px;
+  font-family: "Poppins", sans-serif;
   object-fit: contain;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -59,21 +61,23 @@ export default {
   letter-spacing: normal;
 }
 .track-claim {
-  text-align: center;
+  text-align: left;
   object-fit: contain;
   width: 150px;
   margin-left: 6px;
   height: 15px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
+  font-family: "Poppins", sans-serif;
   line-height: normal;
   letter-spacing: normal;
 }
 .sub-track {
   width: 180px;
   height: 9px;
+  font-family: "Poppins", sans-serif;
   margin-top: 5px;
   object-fit: contain;
   font-size: 13px;

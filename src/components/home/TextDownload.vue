@@ -1,8 +1,8 @@
 <template>
   <!-- <div class="container"> -->
     <div class="style-download">
-      <p class="download">Download Our Apps</p>
-      <p class="sub-download">Send packages through your phone And track your shipment</p>
+      <p class="download">Unduh Aplikasi Lion Parcel</p>
+      <p class="sub-download">Kirim paket melalui ponsel Anda dan lacak kiriman anda</p>
       <div class="store">
         <img src="../../assets/playstore.png" class="img-store" />
         <img src="../../assets/appstore.png" class="img-store" />
@@ -16,21 +16,25 @@ export default {};
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 .download {
   font-size: 24px;
   text-align: center;
-  font-weight: 600;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   color: #d11f40;
 }
 .sub-download {
   object-fit: contain;
   font-size: 14px;
+  font-family: "Poppins", sans-serif;
   width: 230px;
+  text-align: center;
   align-self: center;
   height: 40px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: bold;
 }
 .style-download {
   display: flex;
