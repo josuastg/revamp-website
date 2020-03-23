@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="container"> -->
+  <div class="content">
     <div class="columns">
       <div class="column">
         <div class="card">
@@ -7,10 +7,10 @@
             <div class="content">
               <img src="../../assets/courier.png" class="img" />
               <div class="desc">
-                <p class="title">Free Pick-Up</p>
+                <p class="title">Gratis Jemput</p>
                 <p
                   class="subtitle"
-                >No need to bother to our office, your package will be picked up by the nearest courier and delivered to the shipping destination.</p>
+                >Tidak perlu repot ke kantor kami, paket Anda akan dijemput oleh kurir terdekat dan dikirim ke tujuan pengiriman.</p>
               </div>
             </div>
           </div>
@@ -22,10 +22,10 @@
             <div class="content">
               <img src="../../assets/truck.png" class="second-img" />
               <div class="desc">
-                <p class="title">Tracking Shipment</p>
+                <p class="title">Lacak Pengiriman</p>
                 <p
                   class="subtitle"
-                >Get an update for your package delivery status by using the tracking feature</p>
+                >Lacak pengiriman kamu kapanpun dan dimanapun.</p>
               </div>
             </div>
           </div>
@@ -37,17 +37,17 @@
             <div class="content">
               <img src="../../assets/money.png" class="three-img" />
               <div class="desc">
-                <p class="title">Save Rp 0000</p>
+                <p class="title">Hemat Rp 0000</p>
                 <p
                   class="subtitle"
-                >Send as many packages as you want without fear of expensive shipping</p>
+                >Kirim paket sebanyak yang Anda inginkan tanpa takut akan pengiriman mahal.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  <!-- </div> -->
+  </div>
 </template>
 
 <script>
@@ -68,17 +68,17 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
 .content {
   justify-content: center;
   display: flex;
   flex-direction: row;
-  margin-top:20px;
-  margin-bottom:20px;
-
+  margin:20px;
 }
 .img {
   width: 86px;
-  height: 180px;
+  height: 190px;
   display: flex;
   background-repeat: no-repeat;
   background-size: contain;
@@ -86,26 +86,27 @@ export default {
 }
 
 .second-img {
-  width: 140px;
-  height: 180px;
-  display: flex;
-  background-repeat: no-repeat;
-  background-size: contain;
-  justify-content: center;
-}
-.three-img {
-  width: 80px;
-  height: 90px;
-  margin-top: 90px;
+  width: 145px;
+  height: 190px;
   display: flex;
   background-repeat: no-repeat;
   background-size: contain;
   justify-content: flex-end;
 }
+.three-img {
+  width: 85px;
+  height: 110px;
+  margin-top: 80px;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: contain;
+  justify-content: center;
+}
 .title {
   object-fit: contain;
   font-size: 18px;
   font-weight: 600;
+  font-family: "Poppins", sans-serif;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -116,7 +117,9 @@ export default {
   object-fit: contain;
   font-size: 14px;
   font-weight: normal;
+  font-family: "Poppins", sans-serif;
   font-stretch: normal;
+  text-align: left;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
@@ -133,5 +136,4 @@ export default {
   width: 240px;
   height: 160px;
 }
-
 </style>
