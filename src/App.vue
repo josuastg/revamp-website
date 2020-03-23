@@ -1,5 +1,5 @@
 <template>
-  <div class="app"> 
+  <div > 
  <app-nav-bar></app-nav-bar>
   <router-view></router-view>
   </div>
@@ -17,7 +17,4 @@ export default {
 </script>
 
 <style scoped>
-.app{
-  justify-content: center;
-}
 </style>
