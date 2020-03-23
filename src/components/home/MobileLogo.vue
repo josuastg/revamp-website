@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <!-- <div class="container"> -->
     <div class="content"> 
     <div class="img-logo" :style="item"/>
-</div>
+<!-- </div> -->
   </div>
 </template>
 
@@ -24,16 +24,18 @@ export default {
 
 <style scoped>
 .img-logo {
-  width: 380px;
-  height: 320px;
+  width: 340px;
+  height: 340px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  align-self: center;
 }
 
-/* .content{
+.content{
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
-} */
+}
 </style>
