@@ -34,7 +34,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 .promo-card {
   width: 230px;
