@@ -1,6 +1,5 @@
 <template>
-  <div class="container">
-    <p class="why-us">Why Us ?</p>
+  <!-- <div class="container"> -->
     <div class="columns">
       <div class="column">
         <div class="card">
@@ -48,7 +47,7 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -73,10 +72,13 @@ export default {
   justify-content: center;
   display: flex;
   flex-direction: row;
+  margin-top:20px;
+  margin-bottom:20px;
+
 }
 .img {
   width: 86px;
-  height: 200px;
+  height: 180px;
   display: flex;
   background-repeat: no-repeat;
   background-size: contain;
@@ -84,8 +86,8 @@ export default {
 }
 
 .second-img {
-  width: 108px;
-  height: 200px;
+  width: 140px;
+  height: 180px;
   display: flex;
   background-repeat: no-repeat;
   background-size: contain;
@@ -93,7 +95,7 @@ export default {
 }
 .three-img {
   width: 80px;
-  height: 110px;
+  height: 90px;
   margin-top: 90px;
   display: flex;
   background-repeat: no-repeat;
@@ -131,15 +133,5 @@ export default {
   width: 240px;
   height: 160px;
 }
-.why-us {
-  object-fit: contain;
-  font-size: 18px;
-  text-align: left;
-  margin-left: 20px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
+
 </style>
