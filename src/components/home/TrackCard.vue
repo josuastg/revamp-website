@@ -15,6 +15,7 @@
         </div>
       </div>
     </div>
+    <slot></slot>
     <p class="track-claim">Klaim</p>
     <div class="content">
       <div class="card">
