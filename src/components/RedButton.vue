@@ -14,7 +14,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 .title {
   font-weight: 600;
-  width: 82px;
+  width: 86px;
   height: 19px;
   font-family: "Poppins", sans-serif;
   font-stretch: normal;
