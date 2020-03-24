@@ -1,9 +1,10 @@
 <template>
-  <div class="container">
-    <p class="title">PENGIRIMAN CEPAT & MURAH</p>
-    <app-subtitle></app-subtitle>
-    <slot></slot>
-    <!-- <app-button-group></app-button-group> -->
+  <div class="content-title">
+    <div class="container">
+      <p class="title">PENGIRIMAN CEPAT & MURAH</p>
+      <app-subtitle></app-subtitle>
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -29,7 +30,10 @@ export default {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  margin-top: 20px;
   object-fit: contain;
+}
+
+.content-title{
+  margin-bottom: 10px;
 }
 </style>
