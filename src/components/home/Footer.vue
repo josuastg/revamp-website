@@ -105,7 +105,7 @@ export default {};
 .img-content {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .title {
@@ -135,7 +135,7 @@ export default {};
   font-family: "Poppins", sans-serif;
   font-stretch: normal;
   text-align: right;
-  padding-right: 10px;
+  text-align: center;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;

@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <p class="track">Lacak Pengiriman Anda Sekarang Disini</p>
+    <p class="track">Lacak Pengiriman Anda</p>
     <div class="content">
       <div class="card">
         <div class="card-content">
@@ -47,9 +47,8 @@ export default {
   margin-top: 20px;
 }
 .track {
-  text-align: center;
+  text-align: left;
   width: 330px;
-  height: 15px;
   margin-left: 6px;
   font-family: "Poppins", sans-serif;
   object-fit: contain;
