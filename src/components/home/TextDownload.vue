@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="container"> -->
+  <div class="container">
   <div class="style-download">
     <p class="download">Unduh Aplikasi Lion Parcel</p>
     <p class="sub-download">Kirim paket melalui ponsel Anda dan lacak kiriman anda</p>
@@ -8,7 +8,7 @@
       <img src="../../assets/appstore.png" class="img-store" />
     </div>
   </div>
-  <!-- </div> -->
+  </div>
 </template>
 
 <script>
@@ -30,8 +30,7 @@ export default {};
 }
 @media (min-width: 600px) {
   .download {
-    font-size: 24px;
-    text-align: center;
+    font-size: 18px;
     font-weight: bold;
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -67,15 +66,27 @@ export default {};
 .style-download {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
-.store {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
+
+@media (min-width: 360px) {
+  .store {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
+
+@media (min-width: 600px) {
+  .store {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 60px;
+  }
+}
+
 .img-store {
   width: 104px;
   height: 30px;
