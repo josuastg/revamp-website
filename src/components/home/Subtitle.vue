@@ -1,5 +1,5 @@
 <template>
-  <p class="subtitle">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet djaoe jfunf lorem</
+  <p class="subtitle">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet djaoe jfunf lorem</p>
 </template>
 
 <script>
