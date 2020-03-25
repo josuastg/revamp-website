@@ -10,11 +10,9 @@
 
 <script>
 import Subtitle from "./Subtitle";
-// import ButtonGroup from "./ButtonGroup";
 export default {
   components: {
     "app-subtitle": Subtitle
-    // "app-button-group": ButtonGroup
   }
 };
 </script>
@@ -24,7 +22,9 @@ export default {
 .title {
   text-align: center;
   font-weight: 600;
-  font-size: 25.5px;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
   font-family: "Poppins", sans-serif;
   font-stretch: normal;
   font-style: normal;
