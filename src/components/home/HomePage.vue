@@ -16,71 +16,76 @@
       </div>
     </app-title>
     <div class="second-content">
-      <section class="section">
-        <div class="container">
-          <section class="section" id="shipping-card">
-            <app-shipping-card></app-shipping-card>
-          </section>
-          <section class="section" id="track-card">
-            <div class="level">
-              <div class="level-left">
-                <app-mobile-logo v-if="isDesktop()"></app-mobile-logo>
-                <app-text-download v-if="isDesktop()"></app-text-download>
-              </div>
-              <div class="level-right">
-                <app-track-card>
-                  <app-mobile-logo v-if="isMobile()"></app-mobile-logo>
-                  <app-text-download v-if="isMobile()"></app-text-download>
-                </app-track-card>
-              </div>
+      <div class="container">
+        <section class="section" id="shipping-card">
+          <app-shipping-card></app-shipping-card>
+        </section>
+        <section class="section" id="track-card">
+          <div class="level">
+            <div class="level-left">
+              <app-mobile-logo v-if="isDesktop()"></app-mobile-logo>
+              <app-text-download v-if="isDesktop()"></app-text-download>
             </div>
-          </section>
-          <section class="section">
+            <div class="level-right">
+              <app-track-card>
+                <app-mobile-logo v-if="isMobile()"></app-mobile-logo>
+                <app-text-download v-if="isMobile()"></app-text-download>
+              </app-track-card>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="level">
             <app-cloud-logo></app-cloud-logo>
-          </section>
-          <section class="section">
-            <div class="level">
-              <div class="level-left">
+            <app-airplane-logo></app-airplane-logo>
+          </div>
+        </section>
+        <section class="section">
+          <div class="level">
+            <div class="level-left">
+              <p id="help-title" v-if="isDesktop()">Promo</p>
+              <div class="promo-title-mobile" v-if="isMobile()">
                 <p id="help-title">Promo</p>
-              </div>
-              <div class="level-right">
                 <p class="sub">Lihat Semua</p>
               </div>
             </div>
-            <carousel
-              :perPageCustom="[[360, 1], [1024, 3]]"
-              :autoplay="true"
-              :scrollPerPage="true"
-              paginationActiveColor="#d11f40"
-            >
-              <slide>
-                <app-carousel></app-carousel>
-              </slide>
-              <slide>
-                <app-carousel></app-carousel>
-              </slide>
-              <slide>
-                <app-carousel></app-carousel>
-              </slide>
-              <slide>
-                <app-carousel></app-carousel>
-              </slide>
-            </carousel>
-          </section>
-          <section class="section">
-            <p id="help-title">Mengapa Kami ?</p>
-            <app-reason-card></app-reason-card>
-          </section>
-          <section class="section">
-            <app-border></app-border>
-            <section class="section">
-              <app-footer></app-footer>
-            </section>
-          </section>
-
-          <app-bottom></app-bottom>
-        </div>
+            <div class="level-right">
+              <p class="sub" v-if="isDesktop()">Lihat Semua</p>
+            </div>
+          </div>
+          <carousel
+            :perPageCustom="[[360, 1], [1024, 3]]"
+            :autoplay="true"
+            :scrollPerPage="true"
+            paginationActiveColor="#d11f40"
+          >
+            <slide>
+              <app-carousel></app-carousel>
+            </slide>
+            <slide>
+              <app-carousel></app-carousel>
+            </slide>
+            <slide>
+              <app-carousel></app-carousel>
+            </slide>
+            <slide>
+              <app-carousel></app-carousel>
+            </slide>
+          </carousel>
+        </section>
+        <section class="section">
+          <p id="help-title">Mengapa Kami ?</p>
+          <app-reason-card></app-reason-card>
+        </section>
+      </div>
+      <app-border></app-border>
+      <section class="section">
+        <section class="section">
+          <app-footer></app-footer>
+        </section>
       </section>
+
+      <app-bottom></app-bottom>
     </div>
   </div>
 </template>
@@ -96,6 +101,7 @@ import Border from "./Border";
 import TextDownload from "./TextDownload";
 import TrackCard from "./TrackCard";
 import ReasonCard from "./ReasonCard";
+import AirplaneLogo from "./AirplaneLogo";
 import CloudLogo from "./CloudLogo";
 import Footer from "./Footer";
 import RedButton from "../../components/RedButton";
@@ -116,6 +122,7 @@ export default {
     "app-border": Border,
     "app-bottom": Bottom,
     "app-track-button": RedButton,
+    "app-airplane-logo": AirplaneLogo,
     carousel: Carousel,
     slide: Slide
   },
@@ -167,14 +174,25 @@ export default {
   .bg-home-second {
     background-size: cover;
     object-fit: contain;
+    display: flex;
     height: 200px;
     background-position: center;
-    position: relative;
     margin-top: 20px;
     width: 100%;
     background-repeat: no-repeat;
     position: relative;
   }
+}
+
+.airplane {
+  width: 300px;
+  height: 300px;
+}
+
+.promo-title-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 @media (min-width: 600px) {
   .bg-home-second {
