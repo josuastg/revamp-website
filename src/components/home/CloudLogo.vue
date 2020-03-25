@@ -142,5 +142,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-left: 20px;
 }
 </style>
