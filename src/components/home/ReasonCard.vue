@@ -1,11 +1,13 @@
 <template>
-  <div class="content">
+  <div class="style-card">
     <div class="columns">
       <div class="column">
         <div class="card">
           <div class="card-content">
             <div class="content">
-              <img src="../../assets/courier.png" class="img" />
+              <div class="content-image">
+                <img src="../../assets/courier.png" class="img" />
+              </div>
               <div class="desc">
                 <p class="title">Gratis Jemput</p>
                 <p
@@ -20,12 +22,12 @@
         <div class="card">
           <div class="card-content">
             <div class="content">
-              <img src="../../assets/truck.png" class="second-img" />
+              <div class="content-image">
+                <img src="../../assets/truck.png" class="second-img" />
+              </div>
               <div class="desc">
                 <p class="title">Lacak Pengiriman</p>
-                <p
-                  class="subtitle"
-                >Lacak pengiriman kamu kapanpun dan dimanapun.</p>
+                <p class="subtitle">Lacak pengiriman kamu kapanpun dan dimanapun.</p>
               </div>
             </div>
           </div>
@@ -35,7 +37,9 @@
         <div class="card">
           <div class="card-content">
             <div class="content">
-              <img src="../../assets/money.png" class="three-img" />
+              <div class="content-image">
+                <img src="../../assets/money.png" class="three-img" />
+              </div>
               <div class="desc">
                 <p class="title">Hemat Rp 0000</p>
                 <p
@@ -74,34 +78,57 @@ export default {
   justify-content: center;
   display: flex;
   flex-direction: row;
-  margin:20px;
+  margin: 10px;
 }
 .img {
-  width: 86px;
+  width: 90px;
   height: 190px;
-  display: flex;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.style-card {
+  margin-left: 18px;
+  margin-right: 18px;
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .second-img {
-  width: 145px;
+  width: 140px;
   height: 190px;
-  display: flex;
   background-repeat: no-repeat;
   background-size: contain;
-  justify-content: flex-end;
 }
-.three-img {
-  width: 85px;
-  height: 110px;
-  margin-top: 80px;
-  display: flex;
-  background-repeat: no-repeat;
-  background-size: contain;
-  justify-content: center;
+
+@media (min-width: 600px) {
+  .three-img {
+    width: 85px;
+    height: 110px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
+@media (min-width: 360px) {
+  .three-img {
+    width: 180px;
+    height: 100px;
+    margin-top: 90px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 .title {
   object-fit: contain;
   font-size: 18px;
@@ -135,5 +162,9 @@ export default {
 .money {
   width: 240px;
   height: 160px;
+}
+.container-card {
+  justify-content: center;
+  display: flex;
 }
 </style>
