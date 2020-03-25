@@ -1,42 +1,83 @@
 <template>
   <div class="container">
-    <div class="content">
-      <div class="container">
-        <div class="level">
-          <div class="level-right">
-            <div :style="item" class="img-cloud">
-              <p class="text-promo">
-                Tercepat dan Menjangkau seluruh pelosok Indonesia,
-                menggunakan pesawat kami sendiri
-              </p>
-              <p
-                class="sub-text-promo"
-              >Dengan Lion Parcel, Anda dapat mengirim paket ke seluruh pelosok Indonesia yang didukung oleh Lion Air's Fleet,</p>
-              <p class="sub-text-promo"></p>
-              <p class="sub-text-promo">tanpa khawatir menunggu terlalu lama</p>
-            </div>
-          </div>
-          <div class="level-left">
-            <app-airplane-logo></app-airplane-logo>
-          </div>
-        </div>
+    <div :style="item" class="img-cloud" v-if="isDesktop()">
+      <div class="promo">
+        <p class="text-promo">
+          Tercepat dan Menjangkau seluruh pelosok Indonesia,
+          menggunakan pesawat kami sendiri
+        </p>
+        <p class="sub-text-promo">
+          Dengan Lion Parcel, Anda dapat mengirim paket ke seluruh pelosok Indonesia yang didukung oleh Lion Air's Fleet,
+          tanpa khawatir menunggu terlalu lama
+        </p>
       </div>
+    </div>
+    <div class="promo" v-if="isMobile()">
+      <p class="text-promo">
+        Tercepat dan Menjangkau seluruh pelosok Indonesia,
+        menggunakan pesawat kami sendiri
+      </p>
+      <p class="sub-text-promo">
+        Dengan Lion Parcel, Anda dapat mengirim paket ke seluruh pelosok Indonesia yang didukung oleh Lion Air's Fleet,
+        tanpa khawatir menunggu terlalu lama
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-import AirplaneLogo from "./AirplaneLogo";
+// import AirplaneLogo from "./AirplaneLogo";
 export default {
   components: {
-    "app-airplane-logo": AirplaneLogo
+    // "app-airplane-logo": AirplaneLogo
   },
   data() {
     return {
       item: {
         backgroundImage: `url(${require("../../assets/suncloud.png")})`
+      },
+      firstitem: {
+        backgroundImage: `url(${require("../../assets/secondcloud.png")})`
+      },
+      seconditem: {
+        backgroundImage: `url(${require("../../assets/thirdcloud.png")})`
+      },
+      thirditem: {
+        backgroundImage: `url(${require("../../assets/airplane.png")})`
       }
     };
+  },
+  created() {
+    window.addEventListener("resize", this.isMobile);
+    this.isMobile();
+    this.isDesktop();
+  },
+  destroyed() {
+    window.addEventListener("resize", this.isMobile);
+  },
+  methods: {
+    isMobile() {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    isDesktop() {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
+        return false;
+      } else {
+        return true;
+      }
+    }
   }
 };
 </script>
@@ -47,17 +88,28 @@ export default {
 .content {
   flex-direction: column;
   display: flex;
-  justify-content: center;
 }
-.img-cloud {
-  max-width: 100%;
-  margin: 10px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 150px;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
+@media (min-width: 360px) {
+  .img-cloud {
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 120px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .img-cloud {
+    width: 700px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+  }
 }
 .text-promo {
   font-family: "Poppins", sans-serif;
@@ -70,14 +122,13 @@ export default {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  /* padding-left: 40px; */
   color: #d11f40;
 }
 .sub-text-promo {
   font-family: "Poppins", sans-serif;
   object-fit: contain;
   font-size: 12px;
-  max-width: 100%;
+  max-width: 80%;
   text-align: left;
   font-weight: normal;
   font-stretch: normal;
@@ -85,5 +136,11 @@ export default {
   line-height: normal;
   color: #1a1421;
   /* padding-left: 40px; */
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 </style>
