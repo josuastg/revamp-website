@@ -1,52 +1,50 @@
 <template>
-  <section>
-    <nav class="navbar is-transparent is-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="http://lionparcel.com/">
-            <img src="../assets/lion_parcel_logo.png" />
-          </a>
-          <a
-            role="button"
-            class="navbar-burger is-danger burger"
-            aria-label="menu"
-            v-on:click="expandClick"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <div class="navbar-menu">
-          <div class="navbar-end">
-            <router-link to="/" class="navbar-item">
-              <h6 v-bind:style="textStyleHome" v-on:click="changeTextColorHome">Home</h6>
-            </router-link>
-            <router-link to="/about" class="navbar-item">
-              <h6 v-bind:style="textStyleAbout" v-on:click="changeTextColorAbout">About Us</h6>
-            </router-link>
-            <router-link to="/agent" class="navbar-item">
-              <h6 v-bind:style="textStyleAgent" v-on:click="changeTextColorAgent">Agent</h6>
-            </router-link>
-            <router-link to="/community" class="navbar-item">
-              <h6 v-bind:style="textStyleCommunity" v-on:click="changeTextColorCommunity">Community</h6>
-            </router-link>
-            <router-link to="/career" class="navbar-item">
-              <h6 v-bind:style="textStyleCareers" v-on:click="changeTextColorCareers">Careers</h6>
-            </router-link>
-            <router-link to="/" class="navbar-item">
-              <h6 v-bind:style="textStyleFAQ" v-on:click="changeTextColorFAQ">FAQ</h6>
-            </router-link>
-            <router-link to="/" class="navbar-item">
-              <h6 v-bind:style="textStyleContactUs" v-on:click="changeTextColorContactUs">Contact Us</h6>
-            </router-link>
-          </div>
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="http://lionparcel.com/">
+          <img src="../assets/lion_parcel_logo.png" />
+        </a>
+        <a
+          role="button"
+          class="navbar-burger is-danger burger"
+          aria-label="menu"
+          v-on:click="expandClick"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <router-link to="/" class="navbar-item">
+            <h6 v-bind:style="textStyleHome" v-on:click="changeTextColorHome">Home</h6>
+          </router-link>
+          <router-link to="/about" class="navbar-item">
+            <h6 v-bind:style="textStyleAbout" v-on:click="changeTextColorAbout">About Us</h6>
+          </router-link>
+          <router-link to="/agent" class="navbar-item">
+            <h6 v-bind:style="textStyleAgent" v-on:click="changeTextColorAgent">Agent</h6>
+          </router-link>
+          <router-link to="/community" class="navbar-item">
+            <h6 v-bind:style="textStyleCommunity" v-on:click="changeTextColorCommunity">Community</h6>
+          </router-link>
+          <router-link to="/career" class="navbar-item">
+            <h6 v-bind:style="textStyleCareers" v-on:click="changeTextColorCareers">Careers</h6>
+          </router-link>
+          <router-link to="/" class="navbar-item">
+            <h6 v-bind:style="textStyleFAQ" v-on:click="changeTextColorFAQ">FAQ</h6>
+          </router-link>
+          <router-link to="/" class="navbar-item">
+            <h6 v-bind:style="textStyleContactUs" v-on:click="changeTextColorContactUs">Contact Us</h6>
+          </router-link>
         </div>
       </div>
-    </nav>
-  </section>
+    </div>
+  </nav>
 </template>
 
 <script>
