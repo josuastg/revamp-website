@@ -135,13 +135,12 @@ export default {
   font-style: normal;
   line-height: normal;
   color: #1a1421;
-  /* padding-left: 40px; */
 }
 
 .promo {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-left: 20px;
+  margin-left: 12px;
 }
 </style>
