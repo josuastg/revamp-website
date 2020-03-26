@@ -74,7 +74,7 @@ export default {
   justify-content: center;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 320px) {
   .airplane {
     margin-left: 10px;
     background-size: contain;
@@ -89,7 +89,7 @@ export default {
   }
 }
 
-@media (min-width: 360px) {
+@media (min-width: 320px) {
   .second-cloud {
     width: 75%;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@ export default {
     background-repeat: no-repeat;
     background-size: contain;
     height: 80px;
-    margin-bottom: 90px;
+    margin-bottom: 100px;
   }
 }
 
