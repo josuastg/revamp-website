@@ -68,7 +68,10 @@ h5 {
   margin: 12px;
 }
 .shipping-content {
-  margin: 18px;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: 28px;
+  margin-bottom: 18px;
 }
 </style>
 
