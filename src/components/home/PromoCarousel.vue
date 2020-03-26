@@ -5,7 +5,7 @@
         <div class="inside-content">
           <div class="left-content">
             <p class="promo-title">PROMO SHOK</p>
-            <p class="discount">50 %</p>
+            <p class="discount">50%</p>
           </div>
           <div class="right-content">
             <p class="promo-title">
@@ -37,20 +37,22 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 .promo-card {
-  width: 230px;
+  width: 290px;
   height: 140px;
-  display: flex;
   background-size: contain;
   background-repeat: no-repeat;
   object-fit: contain;
   flex-direction: row;
+  display: flex;
+  background-position: center;
   justify-content: center;
 }
 .subtract-card {
-  width: 220px;
+  width: 265px;
+  height: 155px;
   display: flex;
-  height: 125px;
-  align-self: center;
+  justify-content: center;
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -61,9 +63,8 @@ export default {
 
 .promo-title {
   color: #ffffff;
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
-  margin-left: 12px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   object-fit: contain;
@@ -74,7 +75,7 @@ export default {
 }
 .discount {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 40px;
   text-align: right;
   font-weight: bold;
   object-fit: contain;
@@ -86,14 +87,17 @@ export default {
 .left-content {
   display: flex;
   flex-direction: column;
-  padding: 12px;
+  justify-content: flex-start;
+  margin-right: 10px;
+  margin-top: 15px;
+  /* padding-right: 12px; */
 }
 
 .right-content {
   display: flex;
-  margin-left: 5px;
   flex-direction: column;
   justify-content: center;
+  margin-left: 15px;
 }
 
 .inside-content {
