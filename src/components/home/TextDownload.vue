@@ -18,7 +18,7 @@ export default {};
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
-@media (min-width: 360px) {
+@media (min-width: 320px) {
   .download {
     font-size: 24px;
     text-align: center;
@@ -38,7 +38,7 @@ export default {};
   }
 }
 
-@media (min-width: 360px) {
+@media (min-width: 320px) {
   .sub-download {
     object-fit: contain;
     font-size: 14px;
@@ -68,7 +68,7 @@ export default {};
   flex-direction: column;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 320px) {
   .store {
     flex-direction: row;
     display: flex;
@@ -82,7 +82,7 @@ export default {};
   .store {
     flex-direction: row;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 60px;
   }
 }
