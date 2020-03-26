@@ -5,7 +5,7 @@
       <div class="card">
         <div class="card-content">
           <div class="input-track">
-            <input class="input" type="text" placeholder="Masukan nomor pengiriman" />
+            <input class="input" type="text" placeholder="Masukan nomor pengiriman"    />
             <img src="../../assets/question.png" class="img-question" />
           </div>
           <p class="sub-track">+Tambah</p>
@@ -36,6 +36,12 @@ import RedButton from "../RedButton";
 export default {
   components: {
     "app-red-button": RedButton
+  },
+  data() {
+    return {
+      inputTrack: 0,
+      tracks: []
+    };
   }
 };
 </script>
