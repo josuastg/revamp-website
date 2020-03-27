@@ -5,10 +5,16 @@
       <div class="card">
         <div class="card-content">
           <div class="input-track">
-            <input class="input" type="text" placeholder="Masukan nomor pengiriman"    />
+            <div class="add-input">
+              <div class="content-input" v-for="(track, index) in tracks" v-bind:key="track">
+                <input class="input" type="search" placeholder="Masukan nomor pengiriman" />
+                <img src="../../assets/close.png" class="close" @click.prevent="deleteInput(index)" />
+              </div>
+            </div>
+
             <img src="../../assets/question.png" class="img-question" />
           </div>
-          <p class="sub-track">+Tambah</p>
+          <p class="sub-track" @click.prevent="newInput">+Tambah</p>
           <div class="btn">
             <app-red-button title="Lacak"></app-red-button>
           </div>
@@ -39,9 +45,20 @@ export default {
   },
   data() {
     return {
-      inputTrack: 0,
-      tracks: []
+      tracks: ["input"]
     };
+  },
+  methods: {
+    newInput(track) {
+      this.tracks.push(track);
+    },
+    deleteInput(index) {
+      if (this.tracks.length === 1) {
+        return false;
+      } else {
+        this.tracks.splice(index, 1);
+      }
+    }
   }
 };
 </script>
@@ -102,12 +119,29 @@ export default {
   flex-direction: row;
 }
 .img-question {
-  width: 22px;
-  height: 22px;
-  margin-top: 10px;
-  margin-left: 5px;
+  width: 28px;
+  height: 28px;
+  align-self: center;
+  margin-left: 10px;
 }
 .content {
   margin-top: 15px;
+}
+
+.add-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center ;
+}
+.close {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+}
+
+.content-input {
+  display: flex;
+  flex-direction: row;
 }
 </style>
