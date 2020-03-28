@@ -8,13 +8,17 @@
             <div class="add-input">
               <div class="content-input" v-for="(track, index) in tracks" v-bind:key="track">
                 <input class="input" type="search" placeholder="Masukan nomor pengiriman" />
-                <img src="../../assets/close.png" class="close" @click.prevent="deleteInput(index)" />
+                <img
+                  src="../../assets/close.png"
+                  class="close"
+                  @click.prevent="deleteInput(index)"
+                  v-show="showLogo"
+                />
               </div>
             </div>
-
             <img src="../../assets/question.png" class="img-question" />
           </div>
-          <p class="sub-track" @click.prevent="newInput">+Tambah</p>
+          <p class="sub-track" @click.prevent="newInput" v-show="show">+Tambah</p>
           <div class="btn">
             <app-red-button title="Lacak"></app-red-button>
           </div>
@@ -45,19 +49,32 @@ export default {
   },
   data() {
     return {
-      tracks: ["input"]
+      tracks: [""],
+      show: true,
+      showLogo: false
     };
   },
   methods: {
     newInput(track) {
-      this.tracks.push(track);
+      if (this.tracks.length === 5) {
+        this.show = false;
+        alert("only track 5 shipment");
+      } else {
+        this.showLogo = true;
+        this.tracks.push(track);
+      }
     },
     deleteInput(index) {
       if (this.tracks.length === 1) {
+        this.showLogo = false;
         return false;
       } else {
+        this.show = true;
         this.tracks.splice(index, 1);
       }
+    },
+    showLogos() {
+      this.showLogo = false;
     }
   }
 };
@@ -119,8 +136,8 @@ export default {
   flex-direction: row;
 }
 .img-question {
-  width: 28px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
   align-self: center;
   margin-left: 10px;
 }
@@ -131,8 +148,8 @@ export default {
 .add-input {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  justify-content: center ;
+  width: 90%;
+  justify-content: center;
 }
 .close {
   width: 20px;
