@@ -1,8 +1,10 @@
-import HomePage from '../components/home/HomePage';
-import AgentPage from '../components/AgentPage';
-import AboutPage from '../components/AboutUsPage';
-import CareerPage from '../components/CareerPage';
-import CommunityPage from '../components/CommunityPage';
+import HomePage from '../pages/home/HomePage';
+import AgentPage from '../pages/agent/AgentPage';
+import AboutPage from '../pages/about/AboutUsPage';
+import CareerPage from '../pages/career/CareerPage';
+import CommunityPage from '../pages/community/CommunityPage';
+import FAQPage from '../pages/faq/FAQPage';
+
 
 
 export const routes = [
@@ -10,5 +12,6 @@ export const routes = [
     { path: '/agent', component: AgentPage },
     { path: '/about', component: AboutPage },
     { path: '/community', component: CommunityPage },
-    { path: '/career', component: CareerPage }
+    { path: '/career', component: CareerPage },
+    { path: '/faq', component: FAQPage }
 ];
