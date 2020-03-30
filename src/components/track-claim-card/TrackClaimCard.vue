@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
     <p class="track">Lacak Pengiriman Anda</p>
-    <div class="content">
+    <div class="content-track">
       <div class="card">
         <div class="card-content">
           <div class="input-track">
@@ -19,7 +19,7 @@
             <img src="../../assets/question.png" class="img-question" />
           </div>
           <p class="sub-track" @click.prevent="newInput" v-show="show">+Tambah</p>
-          <div class="btn">
+          <div class="btn-track-claim">
             <app-red-button title="Lacak"></app-red-button>
           </div>
         </div>
@@ -27,12 +27,12 @@
     </div>
     <slot></slot>
     <p class="track-claim">Klaim</p>
-    <div class="content">
+    <div class="content-track">
       <div class="card">
         <div class="card-content">
           <input class="input" type="text" placeholder="Masukan nomor klaim" />
           <p class="sub-track">Buat Klaim</p>
-          <div class="btn">
+          <div class="btn-track-claim">
             <app-red-button title="Kirim"></app-red-button>
           </div>
         </div>
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import RedButton from "../RedButton";
+import RedButton from "../button/RedButton";
 export default {
   components: {
     "app-red-button": RedButton
@@ -81,84 +81,5 @@ export default {
 </script>
   
 <style  scoped>
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
-.btn {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
-.track {
-  text-align: left;
-  width: 330px;
-  margin-left: 6px;
-  font-family: "Poppins", sans-serif;
-  object-fit: contain;
-  font-size: 16px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
-.track-claim {
-  text-align: left;
-  object-fit: contain;
-  width: 150px;
-  margin-left: 6px;
-  height: 15px;
-  font-size: 16px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  font-family: "Poppins", sans-serif;
-  line-height: normal;
-  letter-spacing: normal;
-}
-.sub-track {
-  width: 180px;
-  height: 9px;
-  font-family: "Poppins", sans-serif;
-  margin-top: 5px;
-  object-fit: contain;
-  font-size: 13px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 0.24px;
-  color: #d11f40;
-}
-.cards {
-  margin: 20px;
-}
-.input-track {
-  display: flex;
-  flex-direction: row;
-}
-.img-question {
-  width: 25px;
-  height: 25px;
-  align-self: center;
-  margin-left: 10px;
-}
-.content {
-  margin-top: 15px;
-}
-
-.add-input {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  justify-content: center;
-}
-.close {
-  width: 20px;
-  height: 20px;
-  align-self: center;
-}
-
-.content-input {
-  display: flex;
-  flex-direction: row;
-}
+@import "./trackclaim.css";
 </style>

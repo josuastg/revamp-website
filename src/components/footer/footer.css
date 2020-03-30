@@ -1,0 +1,152 @@
+
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+.content-subtitle {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.footer-title {
+  font-weight: bold;
+  font-size: 14px;
+  object-fit: contain;
+  font-family: "Poppins", sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  padding-left: 10px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.footer-subtitle {
+  font-size: 12px;
+  object-fit: contain;
+  padding-left: 10px;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+.content-on-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.social-media {
+  flex-direction: row;
+  width: 16px;
+  height: 16px;
+  margin: 3px;
+  display: flex;
+  align-self: center;
+}
+.social {
+  flex-direction: row;
+  display: flex;
+  align-self: center;
+  padding-left: 10px;
+}
+.icons {
+  width: 16px;
+  height: 16px;
+}
+
+.content-icon {
+  display: flex;
+  flex-direction: row;
+  margin: 7px;
+}
+.customer-service {
+  padding-left: 14px;
+}
+@media (min-width: 360px) {
+  .footer-content {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .footer-content {
+    justify-content: center;
+    display: flex;
+  }
+}
+@media (min-width: 360px) {
+  .img-playstore {
+    width: 140px;
+    height: 39px;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 600px) {
+  .img-playstore {
+    width: 140px;
+    height: 40px;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 360px) {
+  .img-appstore {
+    width: 120px;
+    height: 40px;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 600px) {
+  .img-appstore {
+    width: 120px;
+    height: 40px;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 360px) {
+  .img-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .img-content {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 360px) {
+  .getapp {
+    font-weight: bold;
+    font-size: 18px;
+    object-fit: contain;
+    font-family: "Poppins", sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    position: relative;
+    line-height: normal;
+    text-align: left;
+    letter-spacing: normal;
+  }
+}
+@media (min-width: 600px) {
+  .getapp {
+    font-weight: bold;
+    font-size: 13.8px;
+    object-fit: contain;
+    font-family: "Poppins", sans-serif;
+    font-stretch: normal;
+    display: flex;
+    text-align: right;
+    width: 100%;
+    justify-content: flex-end;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+}

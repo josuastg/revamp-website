@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+.btn-track-claim {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.track {
+  text-align: left;
+  width: 330px;
+  margin-left: 6px;
+  font-family: "Poppins", sans-serif;
+  object-fit: contain;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.track-claim {
+  text-align: left;
+  object-fit: contain;
+  width: 150px;  
+  margin-left: 6px;
+  height: 100%;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.sub-track {
+  width: 180px;
+  height: 9px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 5px;
+  object-fit: contain;
+  font-size: 13px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.24px;
+  color: #d11f40;
+}
+.cards {
+  margin: 20px;
+}
+.input-track {
+  display: flex;
+  flex-direction: row;
+}
+.img-question {
+  width: 25px;
+  height: 25px;
+  align-self: center;
+  margin-left: 5px;
+}
+.content-track {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.add-input {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+}
+.close {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+}
+
+.content-input {
+  display: flex;
+  flex-direction: row;
+}

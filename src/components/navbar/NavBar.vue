@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="http://lionparcel.com/">
-          <img src="../assets/lion_parcel_logo.png" />
+          <img src="../../assets/lion_parcel_logo.png" />
         </a>
         <a
           role="button"
@@ -35,10 +35,10 @@
           <router-link to="/career" class="navbar-item">
             <h6 v-bind:style="textStyleCareers" v-on:click="changeTextColorCareers">Careers</h6>
           </router-link>
-          <router-link to="/" class="navbar-item">
+          <router-link to="/faq" class="navbar-item">
             <h6 v-bind:style="textStyleFAQ" v-on:click="changeTextColorFAQ">FAQ</h6>
           </router-link>
-          <router-link to="/" class="navbar-item">
+          <router-link to="/contact-us" class="navbar-item">
             <h6 v-bind:style="textStyleContactUs" v-on:click="changeTextColorContactUs">Contact Us</h6>
           </router-link>
         </div>

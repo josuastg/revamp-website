@@ -1,20 +1,19 @@
 <template>
-  <div class="content">
     <div class="shipping-content">
       <div class="container">
         <div class="card">
           <div class="card-content">
             <div class="columns">
               <div class="column">
-                <h5>Kota Asal</h5>
+                <p class="ship-title">Kota Asal</p>
                 <input class="input" type="text" placeholder="Masukan alamat kota asal" />
               </div>
               <div class="column">
-                <h5>Kota Tujuan</h5>
+                <p class="ship-title">Kota Tujuan</p>
                 <input class="input" type="text" placeholder="Masukan alamat kota tujuan" />
               </div>
               <div class="column">
-                <h5>Berat Paket</h5>
+                <p class="ship-title">Berat Paket</p>
                 <input
                   class="input"
                   type="number"
@@ -33,11 +32,10 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
-import RedButton from "../RedButton";
+import RedButton from "../button/RedButton";
 export default {
   components: {
     "app-red-button": RedButton
@@ -46,33 +44,7 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
-
-h5 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 20px;
-  font-stretch: normal;
-  font-style: normal;
-  font-family: "Poppins", sans-serif;
-  text-align: left;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #1a1421;
-}
-.btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-self: flex-end;
-  margin: 12px;
-}
-.shipping-content {
-  margin-left: 18px;
-  margin-right: 18px;
-  margin-top: 28px;
-  margin-bottom: 18px;
-}
+@import "./checkpricecard.css";
 </style>
 
      

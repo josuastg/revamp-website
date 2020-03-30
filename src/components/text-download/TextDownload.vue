@@ -63,11 +63,6 @@ export default {};
     font-weight: bold;
   }
 }
-.style-download {
-  display: flex;
-  flex-direction: column;
-}
-
 @media (min-width: 320px) {
   .store {
     flex-direction: row;
@@ -82,14 +77,18 @@ export default {};
   .store {
     flex-direction: row;
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     margin-top: 60px;
   }
 }
-
 .img-store {
   width: 104px;
   height: 30px;
   object-fit: contain;
+}
+
+.style-download {
+  display: flex;
+  flex-direction: column;
 }
 </style>
