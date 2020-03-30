@@ -1,0 +1,88 @@
+
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@media (min-width: 360px) {
+  .bg-home-second {
+    background-size: cover;
+    object-fit: contain;
+    display: flex;
+    height: 200px;
+    background-position: center;
+    margin-top: 20px;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+}
+
+.airplane {
+  width: 300px;
+  height: 300px;
+}
+
+.promo-title-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .bg-home-second {
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    justify-content: auto;
+    display: flex;
+    flex-direction: column;
+    height: 714.5px;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 800px;
+  }
+}
+.bg-home-second:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, rgb(255, 0, 0, 0), #ffffff);
+}
+
+#help-title {
+  object-fit: contain;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 20px;
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.sub {
+  object-fit: contain;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-stretch: normal;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d11f40;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+@media (min-width: 600px) {
+  .second-content {
+    margin-top: 380px;
+  }
+}
