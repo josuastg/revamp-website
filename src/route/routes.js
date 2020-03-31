@@ -1,4 +1,5 @@
 import HomePage from '../pages/home/HomePage';
+import DetailCheckPrice from "../pages/detail-check-price/DetailCheckPrice";
 import AgentPage from '../pages/agent/AgentPage';
 import AboutPage from '../pages/about/AboutUsPage';
 import CareerPage from '../pages/career/CareerPage';
@@ -13,5 +14,6 @@ export const routes = [
     { path: '/about', component: AboutPage },
     { path: '/community', component: CommunityPage },
     { path: '/career', component: CareerPage },
-    { path: '/faq', component: FAQPage }
+    { path: '/faq', component: FAQPage },
+    { path: '/tariff', component:DetailCheckPrice }
 ];
