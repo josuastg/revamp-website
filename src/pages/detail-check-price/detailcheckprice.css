@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+  
   @media (min-width: 300px) {
     .bg-detail-check-price {
         background-size: contain;
@@ -6,17 +8,16 @@
         height: 200px;
         width: 100%;
         background-repeat: no-repeat;
-        position: relative;
+        position: absolute;
       }
   }
 
   
-@media (min-width: 600px) {
+@media (min-width: 640px) {
     .bg-detail-check-price {
       background-size: cover;
-      background-position: center;
+      background-position:center;
       object-fit: contain;
-      justify-content: auto;
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -35,7 +36,141 @@
     margin-top: 20px;
     width: 100%;
     background-repeat: no-repeat;
+    position: absolute;
+  }
+
+  @media (min-width: 640px){
+    .bg-detail-check-price-mobile {
+      background-size: cover;
+      object-fit: contain;
+      display: flex;
+      height: 200px;
+      background-position: center;
+      margin-top: 20px;
+      width: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+    }
+  }
+
+  .content-pack-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .pack-card{
+    width: 200px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .bubble-icon{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 17px;
+    object-fit: contain;
+
+  }
+
+
+  .bubble-content .tooltiptext {
+    visibility: hidden;
+    width: 190px;
+    background-color: #ffffff;
+    color: #1a1421;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    border-color: #000000;
+    border-width: 20px;
+    border-radius: 4px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index:1;
+    top: -20px;
+    left: 50%;
+  }
+
+  .bubble-content:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .bubble-content{
+    flex-direction: row;
+    display: flex;
+    width: 200px;
+    justify-content: flex-end;
     position: relative;
   }
 
-  
+  .icon-pack{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    align-self: center;
+  }
+
+  .title-pack{
+    object-fit: contain;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 3px;
+    color: #4fb0ec;
+  }
+
+  .subtitle-pack{
+    object-fit: contain;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1a1421;
+    text-align: center;
+  }
+
+  .icon-home{
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    align-self: center;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+
+  .content-breadcrumb{
+    padding-left: 55px;
+    padding-top: 20px;
+  }
+
+  .route-breadcrumb{
+    object-fit: contain;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1a1421;
+    text-align: center;
+  }
