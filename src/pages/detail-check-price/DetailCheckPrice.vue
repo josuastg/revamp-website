@@ -74,6 +74,7 @@
     <section class="section">
       <app-footer></app-footer>
     </section>
+    <app-bottom></app-bottom>
   </div>
 </template>
 
@@ -81,12 +82,14 @@
 import CheckPriceCard from "./check-price-card/CheckPriceCard";
 import Border from "../../components/border/Border";
 import Footer from "../../components/footer/Footer";
+import Bottom from "../../components/bottom/Bottom";
 export default {
   name: "detail-shipment-page",
   components: {
     "app-check-price-card": CheckPriceCard,
     "app-border": Border,
-    "app-footer": Footer
+    "app-footer": Footer,
+    "app-bottom": Bottom
   },
   data() {
     return {
