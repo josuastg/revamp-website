@@ -1,0 +1,41 @@
+  @media (min-width: 300px) {
+    .bg-detail-check-price {
+        background-size: contain;
+        object-fit: contain;
+        display: flex;
+        height: 200px;
+        width: 100%;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+  }
+
+  
+@media (min-width: 600px) {
+    .bg-detail-check-price {
+      background-size: cover;
+      background-position: center;
+      object-fit: contain;
+      justify-content: auto;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      height: 300px;
+    }
+  }
+
+  .bg-detail-check-price-mobile {
+    background-size: cover;
+    object-fit: contain;
+    display: flex;
+    height: 200px;
+    background-position: center;
+    margin-top: 20px;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  
