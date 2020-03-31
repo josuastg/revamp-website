@@ -91,18 +91,18 @@
 </template>
 
 <script>
-import Title from "../../components/title/Title";
-import MobileLogo from "../../components/mobile/MobileLogo";
+import Title from "./title/Title";
+import MobileLogo from "./mobile/MobileLogo";
 import { Carousel, Slide } from "vue-carousel";
-import PromoCarousel from "../../components/promo-carousel/PromoCarousel";
-import CheckPriceCard from "../../components/check-price-card/CheckPriceCard";
+import PromoCarousel from "./promo-carousel/PromoCarousel";
+import CheckPriceCard from "./check-price-card/CheckPriceCard";
 import Bottom from "../../components/bottom/Bottom";
 import Border from "../../components/border/Border";
-import TextDownload from "../../components/text-download/TextDownload";
-import TrackCard from "../../components/track-claim-card/TrackClaimCard";
-import ReasonCard from "../../components/reason-card/ReasonCard";
-import Airplane from "../../components/airplane/Airplane";
-import Cloud from "../../components/cloud/Cloud";
+import TextDownload from "./text-download/TextDownload";
+import TrackCard from "./track-claim-card/TrackClaimCard";
+import ReasonCard from "./reason-card/ReasonCard";
+import Airplane from "./airplane/Airplane";
+import Cloud from "./cloud/Cloud";
 import Footer from "../../components/footer/Footer";
 import RedButton from "../../components/button/RedButton";
 import WhiteButton from "../../components/button/WhiteButton";
