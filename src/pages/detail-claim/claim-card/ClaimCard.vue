@@ -6,7 +6,7 @@
           <p class="check-tarif">Klaim Paket</p>
           <div class="columns">
             <div class="column">
-              <p class="ship-title-detail">Input your claim number</p>
+              <p class="ship-title-claim-detail">Input your claim number</p>
               <input class="input" type="text" placeholder="Masukan nomor claim" />
               <p class="claim-information">*Nomor klaim didapat dari saat pengajuan klaim / sms notifikasi dari Lion Parcel. </p>
             </div>
