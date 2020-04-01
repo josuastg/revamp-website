@@ -1,6 +1,6 @@
 <template>
   <a>
-    <button class="button is-danger is-hovered">
+    <button class="button is-danger">
       <p class="title">{{title}}</p>
     </button>
   </a>

@@ -1,4 +1,6 @@
+@import "../../../css/mystyles.css";
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
 .title {
   font-weight: 600;
   width: 85px;
