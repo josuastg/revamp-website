@@ -1,5 +1,9 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+.section-content{
+  padding: 3rem 0.1rem;
+}
 @media (min-width: 360px) {
   .bg-home-second {
     background-size: cover;
