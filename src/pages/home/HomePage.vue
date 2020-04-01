@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="section">
+    <section class="section-content">
       <div :style="item" class="bg-home-second"></div>
     </section>
     <app-title>
@@ -17,10 +17,10 @@
     </app-title>
     <div class="second-content">
       <div class="container">
-        <section class="section" id="shipping-card">
+        <section class="section-content" id="shipping-card">
           <app-check-price-card></app-check-price-card>
         </section>
-        <section class="section" id="track-card">
+        <section class="section-content" id="track-card">
           <div class="level">
             <div class="level-left">
               <app-mobile-logo v-if="isDesktop()"></app-mobile-logo>
@@ -34,13 +34,13 @@
             </div>
           </div>
         </section>
-        <section class="section">
+        <section class="section-content">
           <div class="level">
             <app-cloud-logo></app-cloud-logo>
             <app-airplane-logo></app-airplane-logo>
           </div>
         </section>
-        <section class="section">
+        <section class="section-content">
           <div class="level">
             <div class="level-left">
               <p id="help-title" v-if="isDesktop()">Promo</p>
@@ -73,13 +73,13 @@
             </slide>
           </carousel>
         </section>
-        <section class="section">
+        <section class="section-content">
           <p id="help-title">Mengapa Kami ?</p>
           <app-reason-card></app-reason-card>
         </section>
       </div>
       <app-border></app-border>
-      <section class="section">
+      <section class="section-content">
         <section class="section">
           <app-footer></app-footer>
         </section>
