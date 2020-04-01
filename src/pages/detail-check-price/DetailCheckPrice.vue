@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="section">
+    <section class="section-content">
       <div class="bg-detail-check-price" :style="item" v-if="isDesktop()">
         <div class="content-breadcrumb">
           <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -20,7 +20,7 @@
       <div class="bg-detail-check-price-mobile" :style="secondItem" v-if="isMobile()"></div>
     </section>
     <app-check-price-card></app-check-price-card>
-    <section class="section">
+    <section class="section-content">
       <div class="content-pack-card">
         <div class="columns">
           <div class="column">
