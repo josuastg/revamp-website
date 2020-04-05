@@ -14,7 +14,7 @@
 
   
 @media (min-width: 640px) {
-    .bg-detail-check-claim-mobile {
+    .bg-detail-check-claim {
       background-size: cover;
       background-position:center;
       object-fit: contain;
@@ -27,7 +27,9 @@
     }
   }
 
-  .bg-detail-check-price-mobile {
+
+
+  .bg-detail-check-claim-mobile {
     background-size: cover;
     object-fit: contain;
     display: flex;
@@ -37,20 +39,6 @@
     width: 100%;
     background-repeat: no-repeat;
     position: absolute;
-  }
-
-  @media (min-width: 640px){
-    .bg-detail-check-price-mobile {
-      background-size: cover;
-      object-fit: contain;
-      display: flex;
-      height: 200px;
-      background-position: center;
-      margin-top: 20px;
-      width: 100%;
-      background-repeat: no-repeat;
-      position: absolute;
-    }
   }
 
   .content-result-claim{
@@ -167,6 +155,20 @@
     text-align: center;
   }
 
+@media(min-width: 600px){
+  .bg-detail-check-claim{
+    background-size: cover;
+    background-position:center;
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 300px;
+  }
+}
+  
   .icon-download{
       width: 20px;
       height: 20px;
@@ -195,3 +197,118 @@
     font-family: "Poppins", sans-serif;
     letter-spacing: 0.07px;
   }
+
+  .claim-not-found{
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+  }
+
+  .process-claim{
+    width: 320px;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  .img-result{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .claim-result{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
+  .text-result{
+    font-family: "Poppins", sans-serif;
+    object-fit: contain;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    font-stretch: normal;
+    text-align: center;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #c4c4c4;
+
+  }
+
+  @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+.ship-title-claim-detail{
+  font-size: 15px;
+  font-weight: bolder;
+  margin-top: 10px;
+  font-stretch: normal;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #c4c4c4;
+}
+
+.claim-information{
+    font-size: 12px;
+  font-weight: bolder;
+  margin-top: 10px;
+  font-stretch: normal;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #c4c4c4;
+
+}
+.btn-track {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: center;
+  margin-top: 16px;
+  margin-right: 15px;
+  margin-left: 25px;
+  margin-bottom: 8px;
+}
+@media (min-width: 360px){
+    .shipping-content-detail {
+        margin-left: 18px;
+        margin-right: 18px;
+        margin-top: 90px;
+        margin-bottom: 18px;
+      }
+      
+}
+
+@media (min-width: 600px){
+    .shipping-content-detail {
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 180px;
+        margin-bottom: 18px;
+      }
+      
+}
+
+
+.check-tarif{
+    object-fit: contain;  
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: bolder;
+    font-stretch: normal;
+    font-style: normal;
+    margin-bottom: 5px;
+    text-align: left;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ef3d59;
+
+}
+
