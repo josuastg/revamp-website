@@ -20,7 +20,7 @@
       object-fit: contain;
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width:100%;
       background-repeat: no-repeat;
       position: absolute;
       height: 300px;
@@ -39,24 +39,11 @@
     position: absolute;
   }
 
-  @media (min-width: 640px){
-    .bg-detail-check-price-mobile {
-      background-size: cover;
-      object-fit: contain;
-      display: flex;
-      height: 200px;
-      background-position: center;
-      margin-top: 20px;
-      width: 100%;
-      background-repeat: no-repeat;
-      position: absolute;
-    }
-  }
 
   .content-pack-card{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center
   }
 
   .pack-card{
