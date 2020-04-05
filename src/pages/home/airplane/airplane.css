@@ -13,9 +13,9 @@
   }
   @media (min-width: 600px) {
     .airplane {
-      margin-left: 35px;
       background-size: contain;
       object-fit: contain;
+      margin-left: 30px;
     }
   }
   
@@ -30,7 +30,7 @@
   
   @media (min-width: 600px) {
     .second-cloud {
-      width: 90%;
+      width: 80%;
       background-repeat: no-repeat;
       background-size: contain;
       height: 80px;
@@ -39,10 +39,11 @@
   }
   
   .third-cloud {
-    width: 180px;
+    width: 200px;
     background-repeat: no-repeat;
     background-size: contain;
     height: 100px;
+    background-position: right;
   }
   
   .fourth-cloud {
