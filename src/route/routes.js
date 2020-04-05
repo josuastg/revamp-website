@@ -6,6 +6,8 @@ import CareerPage from '../pages/career/CareerPage';
 import CommunityPage from '../pages/community/CommunityPage';
 import FAQPage from '../pages/faq/FAQPage';
 import DetailClaimPage from "../pages/detail-claim/DetailClaim.vue";
+import NewClaimPage from "../pages/new-claim/NewClaimPage.vue";
+import ClaimSuccessPage from "../pages/claim-success/ClaimSuccessPage.vue";
 
 
 
@@ -16,6 +18,8 @@ export const routes = [
     { path: '/community', component: CommunityPage },
     { path: '/career', component: CareerPage },
     { path: '/faq', component: FAQPage },
-    { path: '/tariff', component:DetailCheckPrice },
-    { path: '/claim', component:DetailClaimPage}
+    { path: '/tariff', component: DetailCheckPrice },
+    { path: '/claim/:id', component: DetailClaimPage },
+    { path: '/claim', component: NewClaimPage},
+    { path: '/success', component: ClaimSuccessPage },
 ];
