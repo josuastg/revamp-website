@@ -31,7 +31,7 @@
       <div class="card">
         <div class="card-content">
           <input class="input" type="text" placeholder="Masukan nomor klaim" />
-          <p class="sub-track">Buat Klaim</p>
+          <p class="sub-track" @click="navigateToNewClaim">Buat Klaim</p>
           <div class="btn-track-claim" @click="navigateToDetailClaim">
             <app-red-button title="Kirim"></app-red-button>
           </div>
@@ -77,6 +77,9 @@ export default {
       this.showLogo = false;
     },
     navigateToDetailClaim() {
+     this.$router.push('/claim/259317');
+  },
+   navigateToNewClaim() {
      this.$router.push('/claim');
   }
   }
