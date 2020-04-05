@@ -30,10 +30,12 @@
     <div class="content-track">
       <div class="card">
         <div class="card-content">
-          <input class="input" type="text" placeholder="Masukan nomor klaim" />
+          <input class="input" type="text" placeholder="Masukan nomor klaim" v-model="claim_id" />
           <p class="sub-track" @click="navigateToNewClaim">Buat Klaim</p>
-          <div class="btn-track-claim" @click="navigateToDetailClaim">
+          <div class="btn-track-claim">
+            <router-link :to="{name: 'detailClaim' ,query:{ q : claim_id}}"> 
             <app-red-button title="Kirim"></app-red-button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -51,7 +53,8 @@ export default {
     return {
       tracks: [""],
       show: true,
-      showLogo: false
+      showLogo: false,
+      claim_id: null
     };
   },
   methods: {
@@ -77,7 +80,7 @@ export default {
       this.showLogo = false;
     },
     navigateToDetailClaim() {
-     this.$router.push('/claim/259317');
+      this.$router.push('/claim/123')
   },
    navigateToNewClaim() {
      this.$router.push('/claim');
