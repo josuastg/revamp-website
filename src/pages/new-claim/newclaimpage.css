@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+
+@media (min-width :360px){
+    .green-leaf{
+        width: 30px;
+        display: flex;
+        height:400px;
+        object-fit: contain;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+@media (min-width :600px){
+    .green-leaf{
+        width: 80px;
+        display: flex;
+        height:300px;
+        object-fit: contain;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+
+
+@media(min-width: 360px){
+    .content-leaf{
+        display: flex;
+        width: 30px;
+        flex-direction: column;
+        align-self: center;
+        position: relative;
+    }
+}
+@media(min-width: 600px){
+    .content-leaf{
+        display: flex;
+        width: 200px;
+        flex-direction: column;
+        align-self: flex-start;
+        margin-top: 200px;
+        position: relative;
+    }
+}
+
+@media(min-width: 360px){
+    .second-content-leaf{
+        display: flex;
+        width:30px;
+        flex-direction: column;
+        align-self: center;
+        margin-top: 300px;
+        position: relative;
+    }
+}
+
+@media(min-width: 600px){
+    .second-content-leaf{
+        display: flex;
+        width: 200px;
+        flex-direction: column;
+        align-self: center;
+        margin-top: 200px;
+        position: relative;
+    }
+}
+
+
+.red-leaf-desktop{
+  width: 100%;
+  width: 100%;
+
+}
+
+.red-leaf-mobile{
+    width:33px;
+    height: 200px;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+  
+  }
+
+  .second-red-leaf-mobile{
+    width:33px;
+    margin-top: 25px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+  }
+
+
+.ellipse{
+    width: 80px;
+    height: 40px;
+    object-fit: contain;
+    margin-top: -82px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.purple-leaf{
+    width: 80px;
+    height: 160px;
+    margin-top:60px;
+    margin-left: -15px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+@media(min-width: 360px){
+    .title-form-claim{
+        object-fit: contain;
+        font-size: 25px;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-weight: bolder;
+        font-stretch: normal;
+        margin-top: -25px;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1a1421;
+      }
+}
+@media(min-width: 600px){
+    .title-form-claim{
+        object-fit: contain;
+        font-size: 20px;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-weight: bolder;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1a1421;
+      }
+}
+
+
+
+
+.content-breadcrumb-claim{
+    padding-top: 20px;
+  }
+
+  .route-breadcrumb{
+    object-fit: contain;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1a1421;
+    text-align: center;
+  }
+
+  .new-claim-content{
+      display: flex;
+      flex-direction: row;
+      
+
+  }
+
+  .bg-detail-new-claim-mobile {
+    background-size: cover;
+    object-fit: contain;
+    display: flex;
+    height: 300px;
+    background-position: center;
+    margin-top: 20px;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
