@@ -11,19 +11,37 @@
   justify-content: flex-end;
   margin-top: 20px;
 }
-.track {
-  text-align: left;
-  width: 330px;
-  margin-left: 6px;
-  font-family: "Poppins", sans-serif;
-  object-fit: contain;
-  font-size: 16px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
+
+@media(min-width: 360px){
+  .track {
+    text-align: left;
+    width: 330px;
+    margin-left: 6px;
+    font-family: "Poppins", sans-serif;
+    object-fit: contain;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
 }
+@media(min-width: 600px){
+  .track {
+    text-align: left;
+    width: 330px;
+    font-family: "Poppins", sans-serif;
+    object-fit: contain;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+}
+
 .track-claim {
   text-align: left;
   object-fit: contain;
@@ -31,7 +49,7 @@
   margin-left: 6px;
   height: 100%;
   margin-top: 30px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -61,11 +79,10 @@
   flex-direction: row;
 }
 .img-question {
-  width: 25px;
-  height: 25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  margin-top: 10px;
 }
 .content-track {
   margin-top: 15px;
@@ -122,6 +139,12 @@
 
 
 
+}
+
+.img-question-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 input{
