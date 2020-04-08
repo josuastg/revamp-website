@@ -304,15 +304,6 @@ export default {
       q: this.$route.query.q
     };
   },
-
-  created() {
-    window.addEventListener("resize", this.isMobile);
-    this.isMobile();
-    this.isDesktop();
-  },
-  destroyed() {
-    window.addEventListener("resize", this.isMobile);
-  },
   methods: {
     newInput(track) {
       if (this.tracks.length === 5) {
