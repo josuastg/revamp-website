@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import RedButton from "../../../components/button/RedButton";
+import RedButton from "../../../../components/button/RedButton";
 
 export default {
   components: {

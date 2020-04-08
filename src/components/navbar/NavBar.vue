@@ -2,7 +2,7 @@
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="http://lionparcel.com/">
+        <a class="navbar-item" href="/">
           <img src="../../assets/lion_parcel_logo.png" />
         </a>
         <a

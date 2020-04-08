@@ -48,7 +48,7 @@
             </div>
             <p class="ship-title-new-claim">Tipe Klaim</p>
             <div class="field">
-              <div class="control is-expanded">
+              <div class="control">
                 <div class="select is-fullwidth">
                   <select>
                     <option>MBG</option>
