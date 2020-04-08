@@ -41,7 +41,10 @@
                 <div class="columns">
                   <div class="column" v-for="(track, index) in tracks" v-bind:key="index">
                     <div class="content-input-detail-track">
-                      <div class="custom-input-detail-track">
+                      <div class="custom-input-detail-track" v-if="index === 0">
+                        <input type="text" placeholder="Masukan nomor pengiriman" />
+                      </div>
+                      <div class="custom-input-detail-track" v-else>
                         <input type="text" placeholder="Masukan nomor pengiriman" />
                         <img
                           src="../../assets/close.png"
@@ -53,13 +56,13 @@
                     </div>
                   </div>
                 </div>
-                <div v-if="isMobile()"> 
-                <p class="sub-detail-track" @click.prevent="newInput"  v-if="show">+Tambah</p>
-              </div>
+                <div v-if="isMobile()">
+                  <p class="sub-detail-track" @click.prevent="newInput" v-if="show">+Tambah</p>
+                </div>
               </div>
               <div class="level">
                 <div class="btn-detail-track" @click="submitTrack()">
-                  <app-red-button title="Track"></app-red-button>
+                  <app-red-button title="Lacak"></app-red-button>
                 </div>
               </div>
             </div>
@@ -314,19 +317,18 @@ export default {
         if (this.tracks.length === 1) {
           this.showCancel = true;
           this.showLogo = true;
-        } else
-         if (this.tracks.length === 1) {
+        } else if (this.tracks.length === 1) {
           this.showCancel = false;
-        }else
-        this.showLogo = true;
+        } else this.showLogo = true;
         this.showInput = false;
         this.tracks.push(track);
       }
     },
     deleteInput(index) {
-      if (this.tracks.length === 1) {
+      if (this.tracks.length === 2) {
         this.showLogo = false;
         this.showCancel = false;
+        this.tracks.splice(index, 1);
         return true;
       } else {
         this.show = true;
