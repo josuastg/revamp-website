@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
     <p class="track">Lacak Pengiriman Anda</p>
-    <!-- <img src="../../../assets/question.png" class="img-question" /> -->
+    <img src="../../../assets/question.png" class="img-question" />
 
     <div class="content-track">
       <div class="card">
