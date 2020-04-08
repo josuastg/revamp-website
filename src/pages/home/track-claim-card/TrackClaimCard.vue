@@ -1,14 +1,18 @@
 <template>
   <div class="cards">
-    <p class="track">Lacak Pengiriman Anda</p>
-    <img src="../../../assets/question.png" class="img-question" />
-
+    <p class="track">Lacak Pengiriman Anda Sekarang Disini</p>
+    <div class="img-question-content">
+      <img src="../../../assets/question.png" class="img-question" />
+    </div>
     <div class="content-track">
       <div class="card">
         <div class="card-content">
           <div class="add-input">
             <div class="content-input" v-for="(track, index) in tracks" v-bind:key="index">
-              <div class="custom-input">
+              <div class="custom-input" v-if="index === 0">
+                <input type="text" placeholder="Masukan nomor pengiriman" />
+              </div>
+              <div class="custom-input" v-else>
                 <input type="text" placeholder="Masukan nomor pengiriman" />
                 <img
                   src="../../../assets/close.png"
@@ -21,8 +25,8 @@
           </div>
           <p class="sub-track" @click.prevent="newInput" v-show="show">+Tambah</p>
           <div class="btn-track-home">
-            <div  @click="clearInput()">
-            <app-white-button title="Cancel" v-show="showCancel"></app-white-button>
+            <div @click="clearInput()">
+              <app-white-button title="Cancel" v-show="showCancel"></app-white-button>
             </div>
             <router-link :to="{name : 'trackShipment', query:{q: 12312}}">
               <app-red-button title="Lacak"></app-red-button>
@@ -87,12 +91,14 @@ export default {
       alert("clicked");
     },
     deleteInput(index) {
-      if (this.tracks.length === 1) {
+      if (this.tracks.length === 2) {
         this.showLogo = false; //erase image
         this.showCancel = false;
+        this.tracks.splice(index, 1);
         return true;
       } else {
         this.show = true;
+        this.showCancel = true;
         this.tracks.splice(index, 1);
       }
     },
