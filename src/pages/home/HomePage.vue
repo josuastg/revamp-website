@@ -43,7 +43,7 @@
         <section class="section-content">
           <div class="level">
             <div class="level-left">
-              <p id="help-title" v-if="isDesktop()">Promo</p>
+              <p id="help-title" v-if="isDesktop()">Program</p>
               <div class="promo-title-mobile" v-if="isMobile()">
                 <p id="help-title">Promo</p>
                 <p class="sub">Lihat Semua</p>
