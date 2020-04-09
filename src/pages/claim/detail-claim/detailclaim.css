@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import "../../../../css/mystyles.css";
-  @media (min-width: 300px) {
+  @media (min-width: 320px) {
     .bg-detail-check-claim {
         background-size: contain;
         object-fit: contain;
@@ -13,7 +13,21 @@
   }
 
   
-@media (min-width: 640px) {
+@media (min-width: 768px) {
+    .bg-detail-check-claim {
+      background-size: cover;
+      background-position:center;
+      object-fit: contain;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      height: 300px;
+    }
+  }
+
+  @media (min-width: 1024px) {
     .bg-detail-check-claim {
       background-size: cover;
       background-position:center;
@@ -117,15 +131,26 @@
       }
     }
 
-  @media (min-width: 600px){
+  @media (min-width: 768px){
     .shipping-content-result-claim {
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: 75px;
+        margin-right: 75px;
         margin-top: 50px;
         margin-bottom: 18px;
       }
 
       
+}
+
+@media (min-width: 1024px){
+  .shipping-content-result-claim {
+      margin-left: 150px;
+      margin-right: 150px;
+      margin-top: 50px;
+      margin-bottom: 18px;
+    }
+
+    
 }
 
   .icon-home{
@@ -140,6 +165,7 @@
   .content-breadcrumb{
     padding-left: 55px;
     padding-top: 20px;
+    position: relative;
   }
 
   .route-breadcrumb{
@@ -199,14 +225,16 @@
   }
 
   .claim-not-found{
-    width: 180px;
+    width: 200px;
     height: 180px;
+    align-self: center;
     object-fit: contain;
   }
 
   .process-claim{
-    width: 320px;
+    width: 300px;
     height: 200px;
+    align-self: center;
     object-fit: contain;
   }
 
@@ -255,7 +283,7 @@
 
 .claim-information{
     font-size: 12px;
-  font-weight: bolder;
+  font-weight: 500;
   margin-top: 10px;
   font-stretch: normal;
   font-style: normal;
@@ -286,14 +314,24 @@
       
 }
 
-@media (min-width: 600px){
+@media (min-width: 768px){
     .shipping-content-detail {
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: 75px;
+        margin-right: 75px;
         margin-top: 180px;
         margin-bottom: 18px;
       }
       
+}
+
+@media (min-width: 1024px){
+  .shipping-content-detail {
+      margin-left: 150px;
+      margin-right: 150px;
+      margin-top: 180px;
+      margin-bottom: 18px;
+    }
+    
 }
 
 

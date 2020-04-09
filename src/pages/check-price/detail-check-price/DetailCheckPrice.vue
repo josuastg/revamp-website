@@ -69,7 +69,6 @@
           </div>
         </div>
       </div>
-      
     </section>
     <app-border></app-border>
 
@@ -115,13 +114,11 @@ export default {
       }
     };
   },
-beforeMount(){
-    console.log('mounted')
+  beforeMount() {
+    console.log("mounted");
     this.focusElement();
-  }
-  ,
+  },
   created() {
-  
     window.addEventListener("resize", this.isMobile);
     this.isMobile();
     this.isDesktop();
@@ -130,10 +127,10 @@ beforeMount(){
     window.addEventListener("resize", this.isMobile);
   },
   methods: {
-    focusElement(){
+    focusElement() {
       const container = document.getElementById("content-pack-card");
-      if(container){
-        container.scrollTo(0, container.scrollHeight)
+      if (container) {
+        container.scrollTo(0, container.scrollHeight);
       }
     },
     isMobile() {
@@ -157,7 +154,7 @@ beforeMount(){
       } else {
         return true;
       }
-    },
+    }
   }
 };
 </script>

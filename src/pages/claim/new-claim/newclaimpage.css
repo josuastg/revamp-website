@@ -114,7 +114,7 @@
 }
 
 
-@media(min-width: 360px){
+@media(min-width: 320px){
     .title-form-claim{
         object-fit: contain;
         font-size: 25px;
@@ -129,7 +129,22 @@
         color: #1a1421;
       }
 }
-@media(min-width: 600px){
+@media(min-width: 768px){
+    .title-form-claim{
+        object-fit: contain;
+        font-size: 20px;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-weight: bolder;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1a1421;
+      }
+}
+
+@media(min-width: 1024px){
     .title-form-claim{
         object-fit: contain;
         font-size: 20px;
@@ -146,10 +161,19 @@
 
 
 
+@media(min-width: 768px){
+    .content-breadcrumb-claim{
+        padding-top: 20px;
+        padding-left: 10px;
+      }
+}
 
-.content-breadcrumb-claim{
-    padding-top: 20px;
-  }
+
+@media(min-width: 1024px){
+    .content-breadcrumb-claim{
+        padding-top: 20px;
+      }
+}
 
   .route-breadcrumb{
     object-fit: contain;
@@ -171,14 +195,29 @@
 
   }
 
-  .bg-detail-new-claim-mobile {
-    background-size: cover;
-    object-fit: contain;
-    display: flex;
-    height: 300px;
-    background-position: center;
-    margin-top: 20px;
-    width: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
+  @media(min-width:320px){
+    .bg-detail-new-claim-mobile {
+        background-size: cover;
+        object-fit: contain;
+        display: flex;
+        height: 300px;
+        background-position: center;
+        margin-top: 20px;
+        width: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+      }
+  }
+  @media(min-width:768px){
+    .bg-detail-new-claim-mobile {
+        background-size: cover;
+        object-fit: contain;
+        display: flex;
+        height: 200px;
+        background-position: center;
+        margin-top: 20px;
+        width: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+      }
   }

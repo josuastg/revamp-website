@@ -68,13 +68,13 @@
                 <div class="img-result">
                   <img src="../../../assets/process_claim.png" class="process-claim" />
                 </div>
-                <p class="text-result">Wait..your claim is being processed</p>
+                <p class="text-result">Tunggu .. Klaim Anda sedang diproses</p>
               </div>
             </section>
           </div>
         </div>
         <section class="section-content">
-          <div class="content-btn-new-claim">
+          <div class="content-btn-new-claim" v-show="btnClaim">
             <button class="button is-danger is-outlined" @click="navigateToClaim">
               <p class="btn-create-claim">Buat Klaim Baru</p>
             </button>
@@ -116,6 +116,7 @@ export default {
       found: true,
       proses: false,
       showing: true,
+      btnClaim: true ,
       q: this.$route.query.q
     };
   },
@@ -130,7 +131,7 @@ export default {
   methods: {
     isMobile() {
       if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
         )
       ) {
@@ -141,7 +142,7 @@ export default {
     },
     isDesktop() {
       if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
         )
       ) {
@@ -155,14 +156,17 @@ export default {
       if (this.count === 1) {
         this.found = false;
         this.notfound = true;
+        this.btnClaim= false
         this.proses = false;
       } else if (this.count === 2) {
         this.found = false;
         this.notfound = false;
+        this.btnClaim= false;
         this.proses = true;
       } else {
         this.found = true;
         this.notfound = false;
+        this.btnClaim = true;
         this.proses = false;
       }
     },

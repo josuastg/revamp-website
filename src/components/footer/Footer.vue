@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="footer-content">
-      <div class="columns">
+      <div class="columns is-full">
         <div class="column">
           <p class="footer-title" v-if="isDesktop()">Lion Parcel</p>
           <div class="content-on-mobile" v-if="isMobile()">

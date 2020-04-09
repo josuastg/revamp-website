@@ -22,11 +22,10 @@
       </div>
     </section>
     <p class="title-form-claim" v-if="isDesktop()">Klaim Form</p>
-    <section class="section-content" v-if="isMobile()">
-      <div :style="bgNewClaimMobile" class="bg-detail-new-claim-mobile"></div>
-    </section>
+    <div class="section-content">
+      <div :style="bgNewClaimMobile" v-if="isMobile()" class="bg-detail-new-claim-mobile"></div>
+    </div>
     <p class="title-form-claim" v-if="isMobile()">Klaim Form</p>
-
     <div class="new-claim-content">
       <div class="content-leaf">
         <!-- <img src="../../assets/left_leaf.png" class="green-leaf" /> -->
@@ -49,8 +48,7 @@
       <app-footer></app-footer>
     </section>
     <app-bottom></app-bottom>
-    <div> 
-    </div>
+    <div></div>
   </div>
 </template>
 
@@ -99,7 +97,7 @@ export default {
   methods: {
     isMobile() {
       if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
         )
       ) {
@@ -110,7 +108,7 @@ export default {
     },
     isDesktop() {
       if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
         )
       ) {
