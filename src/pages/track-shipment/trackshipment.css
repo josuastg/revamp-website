@@ -307,11 +307,20 @@
     }
 }
 
-@media(min-width: 600px){
+@media(min-width: 768px){
+  .track-process{
+        flex-direction: column;
+        display: flex;
+
+  }
+}
+
+@media(min-width: 1024px){
     .track-process{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
 
     }
 }
