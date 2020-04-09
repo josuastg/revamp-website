@@ -2,7 +2,7 @@
   <div>
     <section class="section-content">
       <div class="bg-detail-check-price" :style="item" v-if="isDesktop()">
-        <div class="content-breadcrumb">
+        <div class="content-breadcrumb-detail-check">
           <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul>
               <li>
@@ -135,7 +135,7 @@ export default {
     },
     isMobile() {
       if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
         )
       ) {
@@ -146,7 +146,7 @@ export default {
     },
     isDesktop() {
       if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
         )
       ) {

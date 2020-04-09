@@ -174,10 +174,19 @@
     margin-right: 5px;
   }
 
-  .content-breadcrumb{
-    padding-left: 55px;
-    padding-top: 20px;
-  }
+
+  @media(min-width: 768px){
+    .content-breadcrumb-detail-check{
+      padding-top: 20px;
+      padding-left: 10px;
+    }
+    }
+    @media(min-width: 1024px){
+      .content-breadcrumb-detail-check{
+        padding-top: 20px;
+        padding-left: 50px;
+      }
+      }
 
   .route-breadcrumb{
     object-fit: contain;
