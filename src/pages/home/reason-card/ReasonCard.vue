@@ -7,7 +7,7 @@
             <div class="card-content">
               <div class="content-reason-card">
                 <div class="content-image">
-                  <img src="../../../assets/courier.png" class="img" />
+                  <div :style="courier" class="img"></div>
                 </div>
                 <div class="desc">
                   <p class="reason-card-title">Gratis Jemput</p>
@@ -26,7 +26,7 @@
             <div class="card-content">
               <div class="content-reason-card">
                 <div class="content-image">
-                  <img src="../../../assets/truck.png" class="second-img" />
+                  <div class="second-img" :style="truck"></div>
                 </div>
                 <div class="desc">
                   <p class="reason-card-title">Lacak Pengiriman</p>
@@ -43,7 +43,7 @@
             <div class="card-content">
               <div class="content-reason-card">
                 <div class="content-image">
-                  <img src="../../../assets/money.png" class="three-img" />
+                  <div :style="money" class="three-img"> </div>
                 </div>
                 <div class="desc">
                   <p class="reason-card-title">Hemat Rp 0000</p>
@@ -64,7 +64,15 @@
 export default {
   data() {
     return {
-      images: [{ one: "../../../assets/courier.png" }]
+      courier: {
+        backgroundImage: `url(${require("../../../assets/courier.png")})`
+      },
+      truck: {
+        backgroundImage: `url(${require("../../../assets/truck.png")})`
+      },
+       money: {
+        backgroundImage: `url(${require("../../../assets/money.png")})`
+      }
     };
   },
   methods: {}

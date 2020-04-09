@@ -4,7 +4,7 @@
 .section-content{
   padding: 3rem 0.1rem;
 }
-@media (min-width: 360px) {
+@media (min-width: 320px) {
   .bg-home-second {
     background-size: cover;
     object-fit: contain;
@@ -18,17 +18,22 @@
   }
 }
 
-.airplane {
-  width: 300px;
-  height: 300px;
+@media (min-width: 768px) {
+  .bg-home-second {
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    justify-content: auto;
+    display: flex;
+    flex-direction: column;
+    height: 714.5px;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 800px;
+  }
 }
-
-.promo-title-mobile {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .bg-home-second {
     background-size: cover;
     background-position: center;
@@ -52,6 +57,18 @@
   left: 0;
   background-image: linear-gradient(to bottom, rgb(255, 0, 0, 0), #ffffff);
 }
+
+.airplane {
+  width: 300px;
+  height: 300px;
+}
+
+.promo-title-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 
 #help-title {
   object-fit: contain;
