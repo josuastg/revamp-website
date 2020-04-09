@@ -11,11 +11,21 @@
       object-fit: contain;
     }
   }
-  @media (min-width: 600px) {
+
+  
+  @media (min-width: 768px) {
     .airplane {
       background-size: contain;
       object-fit: contain;
       margin-left: 30px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .airplane {
+      background-size: contain;
+      object-fit: contain;
+      position: relative;
+      margin-top: -60px;
     }
   }
   
@@ -27,38 +37,73 @@
       height: 100px;
     }
   }
-  
-  @media (min-width: 600px) {
+
+  @media (min-width: 768px) {
     .second-cloud {
       width: 80%;
       background-repeat: no-repeat;
       background-size: contain;
       height: 80px;
-      margin-bottom: 150px;
+      margin-bottom: 100px;
     }
   }
   
-  .third-cloud {
-    width: 200px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100px;
-    background-position: right;
+  @media (min-width: 1024px) {
+    .second-cloud {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  @media(min-width: 320px){
+    .third-cloud {
+      width: 200px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      background-position: right;
+    }
   }
   
+  @media(min-width: 768px){
+    .third-cloud {
+      width: 200px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      background-position: center;
+    }
+  }
+  
+  @media(min-width: 1024px){
+    .third-cloud {
+      width: 200px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100px;
+      margin-left: -110px;
+      background-position: center;
+    }
+  }
+  
+  
   .fourth-cloud {
-    width: 135px;
+    width: 155px;
     background-repeat: no-repeat;
     background-size: contain;
     height: 70px;
-    align-self: flex-start;
+    margin-left: -40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
   .content-on-mobile {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    align-self: center;
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
   .content-on-desktop {
     display: flex;
