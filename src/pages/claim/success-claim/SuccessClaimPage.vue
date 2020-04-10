@@ -20,7 +20,8 @@
                 <p class="text-claim-tracking">untuk pelacakan klaim</p>
               </div>
               <div class="text-claim-on-mobile" v-if="isMobile()">
-                <p class="text-claim-tracking">Gunakan ID Klaim  <p class="text-id-claim-tracking">2312321</p>
+                <p class="text-claim-tracking">Gunakan ID Klaim</p>
+                <p class="text-id-claim-tracking">2312321</p>
                 <p class="text-claim-tracking">untuk pelacakan klaim</p>
               </div>
               <div class="content-btn-claim-success" @click="navigateToHome">
@@ -73,6 +74,9 @@ export default {
       }
     };
   },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
   methods: {
     created() {
       window.addEventListener("resize", this.isMobile);
@@ -82,6 +86,7 @@ export default {
     destroyed() {
       window.addEventListener("resize", this.isMobile);
     },
+
     isMobile() {
       if (
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(

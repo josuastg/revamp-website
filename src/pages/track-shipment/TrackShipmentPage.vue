@@ -307,6 +307,9 @@ export default {
       q: this.$route.query.q
     };
   },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
   methods: {
     newInput(track) {
       if (this.tracks.length === 5) {

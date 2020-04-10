@@ -114,10 +114,6 @@ export default {
       }
     };
   },
-  beforeMount() {
-    console.log("mounted");
-    this.focusElement();
-  },
   created() {
     window.addEventListener("resize", this.isMobile);
     this.isMobile();
@@ -126,13 +122,10 @@ export default {
   destroyed() {
     window.addEventListener("resize", this.isMobile);
   },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
   methods: {
-    focusElement() {
-      const container = document.getElementById("content-pack-card");
-      if (container) {
-        container.scrollTo(0, container.scrollHeight);
-      }
-    },
     isMobile() {
       if (
         /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(

@@ -138,6 +138,9 @@ export default {
     this.isMobile();
     this.isDesktop();
   },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
   destroyed() {
     window.addEventListener("resize", this.isMobile);
   },

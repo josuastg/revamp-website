@@ -27,7 +27,12 @@
             <div class="columns">
               <div class="column">
                 <p class="ship-title-claim-detail">Input your claim number</p>
-                <input class="input" type="text" placeholder="Masukan nomor claim" :value="$route.query.q" />
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Masukan nomor claim"
+                  :value="$route.query.q"
+                />
                 <p
                   class="claim-information"
                 >*Nomor klaim didapat dari saat pengajuan klaim / sms notifikasi dari Lion Parcel.</p>
@@ -116,9 +121,12 @@ export default {
       found: true,
       proses: false,
       showing: true,
-      btnClaim: true ,
+      btnClaim: true,
       q: this.$route.query.q
     };
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   },
   created() {
     window.addEventListener("resize", this.isMobile);
@@ -156,12 +164,12 @@ export default {
       if (this.count === 1) {
         this.found = false;
         this.notfound = true;
-        this.btnClaim= false
+        this.btnClaim = false;
         this.proses = false;
       } else if (this.count === 2) {
         this.found = false;
         this.notfound = false;
-        this.btnClaim= false;
+        this.btnClaim = false;
         this.proses = true;
       } else {
         this.found = true;

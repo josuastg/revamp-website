@@ -85,6 +85,8 @@ export default {
         backgroundImage: `url(${require("../../../assets/bg_mobile_new_claim.png")})`
       }
     };
+  },mounted() {
+    window.scrollTo(0, 0);
   },
   created() {
     window.addEventListener("resize", this.isMobile);
