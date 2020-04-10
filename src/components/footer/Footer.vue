@@ -76,7 +76,7 @@
           <div class="social">
             <img src="../../assets/twitter.png" class="social-media" />
             <img src="../../assets/fb.png" class="social-media" />
-            <img src="../../assets/instagram.png" class="social-media" />
+            <img src="../../assets/instagram.png" @click="socialMedia()" class="social-media" />
           </div>
         </div>
         <div class="column">
@@ -112,6 +112,9 @@ export default {
       } else {
         return false;
       }
+    },
+    socialMedia(){
+        window.open("https://www.instagram.com/lionparcelid/?hl=id")
     },
     isDesktop() {
       if (
