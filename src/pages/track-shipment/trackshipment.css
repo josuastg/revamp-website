@@ -438,6 +438,7 @@
         margin-left: 2px;
         object-fit: contain;
         margin-top: 40px;
+        margin-bottom: 15px;
         border-style: solid;
         border-width: 1px;  
     }
@@ -466,7 +467,7 @@
       border: #4fb0ec;
       height: 2px;
       width: 90px;
-      margin-top: 5px;
+      margin-top: 20px;
       object-fit: contain;
       margin-left: 5px;
       margin-right: 5px;
@@ -486,6 +487,7 @@
     width: 50px; 
     object-fit: contain;
     margin-top: 40px;
+    margin-bottom: 15px;
     margin-left: 2px;
     align-self: center;
     transform: rotate(90deg);
@@ -515,7 +517,7 @@
     height: 2px;
     width: 90px; 
     display: flex;
-    margin-top: 5px;
+    margin-top: 20px;
     flex-direction: column;
     object-fit: contain;
     transform: rotate(180deg);
