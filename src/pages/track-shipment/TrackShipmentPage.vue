@@ -72,9 +72,9 @@
     </div>
     <section class="section-content">
       <div class="content-result-claim">
-        <p class="title-search-result-claim">Status Pengiriman Anda</p>
-        <p class="subtitle-search-result-claim">Status sesuai dengan setiap nomor tanda terima</p>
-        <div class="content-track-process">
+        <p class="title-search-result-track">Status Pengiriman Anda</p>
+        <p class="subtitle-search-result-track">Status sesuai dengan setiap nomor tanda terima</p>
+        <div id="content-track-process">
           <div class="container">
             <p class="click-for-detail">Klik untuk detail</p>
             <vs-collapse accordion>
@@ -308,7 +308,8 @@ export default {
     };
   },
   mounted() {
-    window.scrollTo(0, 0);
+    document.getElementById("content-track-process").scrollIntoView();
+    // window.scrollTo(0, 0);
   },
   methods: {
     newInput(track) {

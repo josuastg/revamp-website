@@ -19,7 +19,7 @@
       </div>
       <div class="bg-detail-check-claim-mobile" :style="secondItem" v-if="isMobile()"></div>
     </section>
-    <div class="shipping-content-detail">
+    <div id="shipping-content-detail">
       <div class="container">
         <div class="card">
           <div class="card-content">
@@ -49,7 +49,7 @@
     </div>
     <section class="section-content">
       <div class="content-result-claim">
-        <p class="title-search-result-claim">Hasil pencarian No. Claim 259317</p>
+        <p id="title-search-result-claim">Hasil pencarian No. Claim 259317</p>
         <p class="subtitle-search-result-claim">Klaim Anda telah diproses, bukti transfer di bawah.</p>
         <div class="shipping-content-result-claim">
           <div class="container">
@@ -126,7 +126,7 @@ export default {
     };
   },
   mounted() {
-    window.scrollTo(0, 0);
+    document.getElementById("shipping-content-detail").scrollIntoView();
   },
   created() {
     window.addEventListener("resize", this.isMobile);

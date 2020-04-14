@@ -112,7 +112,7 @@
     margin-right: 5px;
   }
 
-  .content-breadcrumb-track{
+  .breadcrumb-track{
     padding-top: 20px;
   }
 
@@ -318,7 +318,7 @@
 }
 
 @media(min-width: 320px){
-  .content-track-process{ 
+  #content-track-process{ 
     flex-direction: row;
     display: flex;
     width: 100%;
@@ -326,14 +326,14 @@
 }
 }
 @media(min-width: 768px){
-  .content-track-process{ 
+  #content-track-process{ 
     flex-direction: row;
     display: flex;
     width: 100%;
 }
 }
 @media(min-width: 1024px){
-  .content-track-process{ 
+  #content-track-process{ 
     flex-direction: row;
     display: flex;
     width: 100%;
@@ -510,6 +510,69 @@
     border-width: 1px;  
 }
 }
+
+@media(min-width: 360px){
+  .title-search-result-track{
+      object-fit: contain;
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #1a1421;
+    }
+}
+
+@media(min-width: 600px){
+  .title-search-result-track{
+      object-fit: contain;
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #1a1421;
+    }
+}
+
+
+@media(min-width: 360px){
+  .subtitle-search-result-track{
+      font-family: "Poppins", sans-serif;
+      object-fit: contain;
+      font-size: 13px;
+      font-weight: 600;
+      font-stretch: normal;
+      text-align: center;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #c4c4c4;
+    }
+  
+}
+@media(min-width: 600px){
+  .subtitle-search-result-track{
+      font-family: "Poppins", sans-serif;
+      object-fit: contain;
+      font-size: 14px;
+      font-weight: 600;
+      font-stretch: normal;
+      text-align: center;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #c4c4c4;
+    }
+  
+}
+
 
 @media(min-width: 1024px){
   .border-gray{
