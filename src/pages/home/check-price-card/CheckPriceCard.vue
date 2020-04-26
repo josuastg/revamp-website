@@ -124,8 +124,9 @@ export default {
       this.getDestination(loading, search);
     },
     getOrigin(loading, search) {
+      let origin = process.env.VUE_APP_ROOT_API;
       axios
-        .get(`/routes/origin/${search}`)
+        .get(`${origin}/routes/origin/${search}`)
         .then(res => {
           this.listOrigin = res.data;
           loading(false);
@@ -135,8 +136,9 @@ export default {
         });
     },
     getDestination(loading, search) {
+      let destination = process.env.VUE_APP_ROOT_API;
       axios
-        .get(`/routes/destination/${search}`)
+        .get(`${destination}/routes/destination/${search}`)
         .then(res => {
           this.listDestination = res.data;
           loading(false);
