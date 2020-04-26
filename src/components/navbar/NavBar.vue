@@ -26,21 +26,24 @@
           <router-link to="/about" class="navbar-item">
             <h6 v-bind:style="textStyleAbout" v-on:click="changeTextColorAbout">About Us</h6>
           </router-link>
-          <router-link to="/agent" class="navbar-item">
-            <h6 v-bind:style="textStyleAgent" v-on:click="changeTextColorAgent">Agent</h6>
-          </router-link>
-          <router-link to="/community" class="navbar-item">
-            <h6 v-bind:style="textStyleCommunity" v-on:click="changeTextColorCommunity">Community</h6>
-          </router-link>
-          <router-link to="/career" class="navbar-item">
+          <a @click="goToAgent()" class="navbar-item">
+            <h6 v-bind:style="textStyleAgent">Agent</h6>
+          </a>
+          <a @click="goToCommunity()" class="navbar-item">
+            <h6 v-bind:style="textStyleCommunity">Community</h6>
+          </a>
+          <a @click="goToNetwork()" class="navbar-item">
+            <h6 v-bind:style="textStyleCommunity">Network</h6>
+          </a>
+          <!-- <a href="/career" class="navbar-item">
             <h6 v-bind:style="textStyleCareers" v-on:click="changeTextColorCareers">Careers</h6>
-          </router-link>
-          <router-link to="/faq" class="navbar-item">
+          </a>
+          <a to="/faq" class="navbar-item">
             <h6 v-bind:style="textStyleFAQ" v-on:click="changeTextColorFAQ">FAQ</h6>
-          </router-link>
-          <router-link to="/contact-us" class="navbar-item">
+          </a>-->
+          <a href="#contact" class="navbar-item">
             <h6 v-bind:style="textStyleContactUs" v-on:click="changeTextColorContactUs">Contact Us</h6>
-          </router-link>
+          </a>
         </div>
       </div>
     </div>
@@ -178,6 +181,15 @@ export default {
       } else {
         this.changeTextColorContactUs.color = "black";
       }
+    },
+    goToCommunity() {
+      window.open("https://sites.google.com/view/lio-akademi/beranda");
+    },
+    goToAgent() {
+      window.open("http://lionparcel.com/agen");
+    },
+    goToNetwork() {
+      window.open("http://lionparcel.com/network");
     }
   }
 };

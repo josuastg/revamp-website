@@ -11,16 +11,16 @@
               <div class="social">
                 <img src="../../assets/twitter.png" class="social-media" />
                 <img src="../../assets/fb.png" class="social-media" />
-                <img src="../../assets/instagram.png" class="social-media" />
+                <img src="../../assets/instagram.png" class="social-media" @click="socialMedia()" />
               </div>
             </div>
           </div>
           <div class="content-subtitle">
             <br />
             <p class="footer-subtitle">Tentang Kami</p>
-            <p class="footer-subtitle">Faq</p>
-            <p class="footer-subtitle">Karir</p>
-            <p class="footer-subtitle">Komunitas</p>
+            <!-- <p class="footer-subtitle">Faq</p>
+            <p class="footer-subtitle">Karir</p>-->
+            <p class="footer-subtitle" @click="goToCommunity()">Komunitas</p>
           </div>
         </div>
         <div class="column">
@@ -82,8 +82,8 @@
         <div class="column">
           <p class="getapp">Dapatkan Aplikasinya</p>
           <div class="img-content">
-            <img src="../../assets/playstore.png" class="img-playstore" />
-            <img src="../../assets/appstore.png" class="img-appstore" />
+            <img src="../../assets/playstore.png" class="img-playstore" @click="playStore" />
+            <img src="../../assets/appstore.png" class="img-appstore" @click="appStore" />
           </div>
         </div>
       </div>
@@ -113,8 +113,19 @@ export default {
         return false;
       }
     },
-    socialMedia(){
-        window.open("https://www.instagram.com/lionparcelid/?hl=id")
+    socialMedia() {
+      window.open("https://www.instagram.com/lionparcelid/?hl=id");
+    },
+    playStore() {
+      window.open(
+        "https://play.google.com/store/apps/details?id=com.lionparcel.services.consumer&hl=in"
+      );
+    },
+    appStore() {
+      window.open("https://apps.apple.com/id/app/lion-parcel/id1455977134");
+    },
+    goToCommunity() {
+      window.open("https://sites.google.com/view/lio-akademi/beranda");
     },
     isDesktop() {
       if (

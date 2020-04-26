@@ -6,38 +6,60 @@
           <div class="columns">
             <div class="column">
               <p class="ship-title">Kota Asal</p>
-              <keep-alive>
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Masukan alamat kota asal"
+              <div class="content-select">
+                <v-select
+                  label="name"
+                  :filterable="false"
+                  @search="onSearchOrigin"
+                  :options="listOrigin"
+                  :reduce="listOrigin => listOrigin.Name"
                   v-model="origin"
-                />
-              </keep-alive>
+                  close-on-select
+                  placeholder="Masukkan alamat kota asal"
+                >
+                  <template slot="no-options">Masukkan alamat kota asal...</template>
+                  <template slot="option" slot-scope="option">
+                    <div class="d-center">{{ option.Name}}</div>
+                  </template>
+                  <template slot="selected-option" slot-scope="option">
+                    <div class="selected d-center">{{ option.Name}}</div>
+                  </template>
+                </v-select>
+              </div>
             </div>
             <div class="column">
               <p class="ship-title">Kota Tujuan</p>
-              <keep-alive>
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Masukan alamat kota tujuan"
+              <div class="content-select">
+                <v-select
+                  label="name"
+                  :filterable="false"
+                  @search="onSearchDestination"
+                  :options="listDestination"
+                  :reduce="listDestination => listDestination.Name"
                   v-model="destination"
-                />
-              </keep-alive>
+                  placeholder="Masukkan alamat kota tujuan"
+                >
+                  <template slot="no-options">Masukkan alamat kota Tujuan...</template>
+                  <template slot="option" slot-scope="option">
+                    <div class="d-center">{{ option.Name}}</div>
+                  </template>
+                  <template slot="selected-option" slot-scope="option">
+                    <div class="selected d-center">{{ option.Name}}</div>
+                  </template>
+                </v-select>
+              </div>
             </div>
             <div class="column">
               <p class="ship-title">Berat Paket</p>
-              <keep-alive>
+              <div class="custom-input-weight">
                 <input
-                  class="input"
                   type="number"
                   placeholder="Masukan berat paket (max.100kg)"
                   min="1"
                   max="100"
                   v-model="weight"
                 />
-              </keep-alive>
+              </div>
             </div>
             <div class="level">
               <div class="btn">
@@ -48,7 +70,6 @@
                 >
                   <p class="title">Cek Tarif</p>
                 </button>
-                <!-- <app-red-button title="Cek Tarif" :disabled="origin === '' ||destination === '' ||weight === ''  " ></app-red-button> -->
               </div>
             </div>
           </div>
@@ -59,21 +80,30 @@
 </template>
 
 <script>
-// import axios from "axios";
-import { mapActions } from "vuex";
-// import RedButton from "../../../components/button/RedButton";
+import axios from "axios";
+import { mapActions, mapGetters } from "vuex";
 export default {
-  components: {
-    // "app-red-button": RedButton
-  },
+  components: {},
   data() {
     return {
       checkPrice: [],
       message: "",
       origin: "",
       destination: "",
-      weight: null
+      weight: null,
+      listOrigin: [],
+      listDestination: []
     };
+  },
+  watch: {
+    CHECK_PRICE(val) {
+      if (val) {
+        this.$router.push("/tariff");
+      }
+    }
+  },
+  computed: {
+    ...mapGetters(["CHECK_PRICE"])
   },
   methods: {
     getTariff() {
@@ -84,60 +114,38 @@ export default {
       };
       this.initCheckPrice(payload);
     },
-    // navigateToDetailCheckPrice() {
-    //   this.$router.push("/tariff");
-    // },
-
-    // getOrigin() {
-    //   axios
-    //     .get(`/api/api/routes/origin/a`)
-    //     .then(res => {
-    //       this.origin = res.data;
-    //     })
-    //     .catch(err => {
-    //       console.log((this.message = err.message));
-    //     });
-    // },
-    // getDestination() {
-    //   axios
-    //     .get(`/api/api/routes/origin/${this.typeDestination}`)
-    //     .then(res => {
-    //       console.log((this.destination = JSON.stringify(res.data)));
-    //     })
-    //     .catch(err => {
-    //       console.log((this.message = err.message));
-    //     }),
+    onSearchOrigin(search, loading) {
+      loading(false);
+      this.getOrigin(loading, search);
+      loading(false);
+    },
+    onSearchDestination(search, loading) {
+      loading(false);
+      this.getDestination(loading, search);
+    },
+    getOrigin(loading, search) {
+      axios
+        .get(`/routes/origin/${search}`)
+        .then(res => {
+          this.listOrigin = res.data;
+          loading(false);
+        })
+        .catch(err => {
+          console.log((this.message = err.message));
+        });
+    },
+    getDestination(loading, search) {
+      axios
+        .get(`/routes/destination/${search}`)
+        .then(res => {
+          this.listDestination = res.data;
+          loading(false);
+        })
+        .catch(err => {
+          console.log((this.message = err.message));
+        });
+    },
     ...mapActions(["initCheckPrice"])
-  },
-  mounted: function() {
-    console.log("mounted");
-  },
-  computed: {
-    // ...mapState(["check_price"])
-    // filteredOrigin() {
-    //   if (this.typeOrigin) {
-    //     return this.origin.filter(org => {
-    //       return this.typeOrigin
-    //         .toLowerCase()
-    //         .split(" ")
-    //         .every(v => org.Name.toLowerCase().includes(v));
-    //     });
-    //   } else {
-    //     return this.origin;
-    //   }
-    // },
-    // filteredDestination() {
-    //   if (this.typeDestination) {
-    //     return this.destination.filter(dest => {
-    //       return this.typeDestination
-    //         .toLowerCase()
-    //         .split(" ")
-    //         .every(v => dest.Name.toLowerCase().includes(v));
-    //     });
-    //   } else {
-    //     return this.destination;
-    //   }
-    // }
   }
 };
 </script>

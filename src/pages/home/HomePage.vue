@@ -81,7 +81,7 @@
       <app-border></app-border>
       <section class="section-content">
         <section class="section">
-          <app-footer></app-footer>
+          <app-footer id="contact"></app-footer>
         </section>
       </section>
 
