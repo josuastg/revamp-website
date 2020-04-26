@@ -9,7 +9,8 @@ const state = {
 
 const actions = {
     initCheckPrice({ commit }, payload) {
-        axios.get(`/api/v3/tariffv2?origin=${payload.origin}&destination=${payload.destination}&weight=${payload.weight}&commodity=GEN-GENERAL OTHERS - GENERAL LAINNYA.&goods_value&is_insurance&is_wood_packing`,
+        let check_price = process.env.VUE_APP_CHECK_PRICE
+        axios.get(`${check_price}/tariffv2?origin=${payload.origin}&destination=${payload.destination}&weight=${payload.weight}&commodity=GEN-GENERAL OTHERS - GENERAL LAINNYA.&goods_value&is_insurance&is_wood_packing`,
             {
                 headers: {
                     "Authorization": "Basic cHJkQGxpb25wYXJjZWxfYXBpOmpodSZqZ3UqM0Y1JCUjZkZ0eUAjJEJOT19AI0BnZ0YjJCUkR0hZWV4mJSQ=",

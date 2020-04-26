@@ -15,7 +15,7 @@ module.exports = {
                 "target": 'http://lionparcel.com/api/',
                 "ws": true,
                 "changeOrigin": true,
-                "secure": false
+                "secure": false,
             },
         }
 
